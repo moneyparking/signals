@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Economic Signal Audit</title>
+  <title>Independent Economic Signal Review</title>
 
   <style>
     :root {
@@ -13,10 +13,10 @@
       --border-muted: #d6e2da;
       --bg-muted: #f3f7f4;
 
-      /* Institutional Audit Green (NOT CTA) */
+      /* Institutional audit green */
       --audit-green: #0f3d2e;
 
-      /* Neutral Graphite CTA */
+      /* Neutral graphite CTA */
       --cta-bg: #1f2937;
       --cta-bg-hover: #111827;
       --cta-text: #ffffff;
@@ -30,6 +30,18 @@
       color: var(--text-primary);
       background: #ffffff;
       line-height: 1.55;
+    }
+
+    /* AUTHORITY BAR */
+    .authority-bar {
+      width: 100%;
+      background: #0f172a;
+      color: #e5e7eb;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 10px 16px;
     }
 
     /* HEADER */
@@ -53,7 +65,7 @@
     .logo {
       font-weight: 600;
       font-size: 14px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
     }
 
     nav a {
@@ -78,7 +90,7 @@
       padding: 96px 24px;
     }
 
-    /* HERO — INSTITUTIONAL */
+    /* HERO */
     .hero-institutional {
       border-top: 6px solid var(--audit-green);
       padding-top: 64px;
@@ -90,6 +102,12 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--audit-green);
+      margin-bottom: 8px;
+    }
+
+    .jurisdiction {
+      font-size: 13px;
+      color: var(--text-secondary);
       margin-bottom: 24px;
     }
 
@@ -172,7 +190,7 @@
       border-radius: 16px;
     }
 
-    /* HOW IT WORKS */
+    /* PROCESS */
     .steps {
       border-left: 2px solid var(--border-muted);
       padding-left: 24px;
@@ -257,20 +275,27 @@
 
 <body>
 
+<div class="authority-bar">
+  Independent economic signal review for B2B SaaS teams
+</div>
+
 <header class="header">
   <div class="header-inner">
-    <div class="logo">ECONOMIC SIGNAL AUDIT</div>
+    <div class="logo">INDEPENDENT SIGNAL REVIEW</div>
     <nav>
-      <a href="#what">Scope</a>
-      <a href="#how">Process</a>
-      <a href="#pricing">Assessment</a>
-      <a class="btn-header">Request Diagnostic Review</a>
+      <a href="#scope">Scope</a>
+      <a href="#process">Process</a>
+      <a href="#assessment">Assessment</a>
+      <a class="btn-header">Request Independent Review</a>
     </nav>
   </div>
 </header>
 
 <div class="container hero-institutional">
-  <div class="hero-label">Economic Signal Audit</div>
+  <div class="hero-label">Independent Economic Review</div>
+  <div class="jurisdiction">
+    Applied economic review · Paid acquisition systems
+  </div>
 
   <h1>
     Your growth metrics<br/>
@@ -285,7 +310,7 @@
   <div class="hero-divider"></div>
 
   <div class="cta-group">
-    <a class="btn-primary">Request Diagnostic Review</a>
+    <a class="btn-primary">Request Independent Review</a>
     <span class="hero-note">
       Screening-level review · Manual verification · 48–72h
     </span>
@@ -298,13 +323,13 @@
   </div>
 
   <section class="section-block">
-    <h2>Why this exists</h2>
+    <h2>Why this review exists</h2>
     <p>CPL holds. Trials increase. Revenue plateaus.</p>
     <p><strong>This is not a marketing failure.<br/>It is a signal integrity failure.</strong></p>
   </section>
 
-  <section id="what">
-    <h2>Scope of the diagnostic</h2>
+  <section id="scope">
+    <h2>Scope of review</h2>
     <p class="secondary">
       Screening-level verification, not a full economic assessment.
     </p>
@@ -315,8 +340,8 @@
     </ul>
   </section>
 
-  <section id="how">
-    <h2>Process</h2>
+  <section id="process">
+    <h2>Review process</h2>
     <div class="steps">
       <div class="step">
         <h3>1. Data connection (read-only)</h3>
@@ -334,8 +359,8 @@
     <p class="secondary">Typical delivery: 48–72 hours.</p>
   </section>
 
-  <section id="pricing">
-    <h2>Full Economic Assessment</h2>
+  <section id="assessment">
+    <h2>Full economic assessment</h2>
     <p class="secondary">
       Formal assessment suitable for executive and board decisions.
     </p>
@@ -347,7 +372,7 @@
         <li>Board-ready PDF</li>
       </ul>
       <div class="price">$1,200 — one-time</div>
-      <a class="btn-primary">Request Diagnostic Review</a>
+      <a class="btn-primary">Request Independent Review</a>
     </div>
   </section>
 </div>
@@ -355,12 +380,12 @@
 <footer>
   <h2>Stop scaling on assumptions.</h2>
   <p class="secondary">Verify whether your growth signal is economically valid.</p>
-  <a class="btn-primary">Request Diagnostic Review</a>
+  <a class="btn-primary">Request Independent Review</a>
 </footer>
 
 <div id="modal" class="modal">
   <div class="modal-content">
-    <h2>Request Diagnostic Review</h2>
+    <h2>Request Independent Review</h2>
     <p class="secondary">
       All requests are manually reviewed for relevance.
     </p>
@@ -383,7 +408,7 @@
         You will receive a confirmation within 24 hours.
       </p>
 
-      <button type="submit" class="btn-primary">Request Review</button>
+      <button type="submit" class="btn-primary">Submit Review Request</button>
     </form>
 
     <button class="modal-close">Close</button>
