@@ -13,7 +13,6 @@
       --border-muted: #d6e2da;
       --bg-muted: #f3f7f4;
 
-      /* Institutional Audit Green */
       --cta-bg: #0f3d2e;
       --cta-bg-hover: #0b2e22;
       --cta-text: #ffffff;
@@ -21,9 +20,7 @@
       --accent-soft: #1f6f54;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -68,6 +65,7 @@
       background: var(--cta-bg);
       color: var(--cta-text) !important;
       border-radius: 6px;
+      cursor: pointer;
     }
 
     /* LAYOUT */
@@ -101,13 +99,9 @@
       margin-bottom: 12px;
     }
 
-    p {
-      margin-bottom: 16px;
-    }
+    p { margin-bottom: 16px; }
 
-    .secondary {
-      color: var(--text-secondary);
-    }
+    .secondary { color: var(--text-secondary); }
 
     .clarifier {
       font-size: 14px;
@@ -116,9 +110,7 @@
     }
 
     /* CTA */
-    .cta-group {
-      margin-top: 32px;
-    }
+    .cta-group { margin-top: 32px; }
 
     .btn-primary {
       display: inline-block;
@@ -148,9 +140,7 @@
       margin-top: 12px;
     }
 
-    section {
-      margin-top: 120px;
-    }
+    section { margin-top: 120px; }
 
     .section-block {
       background: #f6faf8;
@@ -158,13 +148,8 @@
       border-radius: 16px;
     }
 
-    ul {
-      padding-left: 18px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
+    ul { padding-left: 18px; }
+    li { margin-bottom: 8px; }
 
     /* HOW IT WORKS */
     .steps {
@@ -172,11 +157,9 @@
       padding-left: 24px;
     }
 
-    .step {
-      margin-bottom: 32px;
-    }
+    .step { margin-bottom: 32px; }
 
-    /* LIMITATION BOX */
+    /* LIMITATION */
     .box-muted {
       background: #eef5f1;
       border: 1px solid #cfe3d8;
@@ -229,10 +212,6 @@
       border-radius: 12px;
     }
 
-    .modal-content form {
-      margin-top: 24px;
-    }
-
     label {
       display: block;
       font-size: 14px;
@@ -272,7 +251,7 @@
       <a href="#what">What we check</a>
       <a href="#how">How it works</a>
       <a href="#pricing">Pricing</a>
-      <a class="btn-header">Run Diagnostic</a>
+      <a class="btn-header">Request Diagnostic Review</a>
     </nav>
   </div>
 </header>
@@ -287,7 +266,7 @@
   </div>
 
   <div class="cta-group">
-    <a class="btn-primary">Run Free Diagnostic</a>
+    <a class="btn-primary">Request Diagnostic Review</a>
     <a class="cta-secondary" href="#what">See what we actually analyze →</a>
   </div>
 
@@ -306,21 +285,15 @@
 
   <section id="what">
     <h2>What this diagnostic verifies</h2>
-    <p><strong>This free diagnostic answers one question only:</strong></p>
-    <p>Does the signal you use to scale paid acquisition still causally correlate with revenue?</p>
+    <p class="secondary">
+      This is a screening-level diagnostic, not a full economic assessment.
+    </p>
 
     <h3>We analyze</h3>
     <ul>
       <li>Paid spend → trial → activation → deal linkage</li>
       <li>Scaling trigger metrics</li>
       <li>Rule-based violations</li>
-    </ul>
-
-    <h3>We explicitly do NOT</h3>
-    <ul>
-      <li>Optimize campaigns</li>
-      <li>Suggest channels</li>
-      <li>Sell marketing services</li>
     </ul>
   </section>
 
@@ -357,14 +330,17 @@
     </div>
 
     <div class="cta-group">
-      <a class="btn-primary">Run Free Diagnostic</a>
+      <a class="btn-primary">Request Diagnostic Review</a>
     </div>
   </section>
 
   <section id="pricing">
     <h2>Full Economic Diagnostic</h2>
+    <p class="secondary">
+      This is a formal economic assessment suitable for executive and board decisions.
+    </p>
+
     <div class="pricing-card">
-      <p>For teams that need certainty.</p>
       <ul>
         <li>Exact annualized loss</li>
         <li>Root cause ontology</li>
@@ -372,50 +348,32 @@
         <li>Board-ready PDF</li>
       </ul>
       <div class="price">$1,200 — one-time</div>
-      <a class="btn-primary">Get Full Diagnostic</a>
+      <a class="btn-primary">Request Diagnostic Review</a>
     </div>
   </section>
 
-  <section>
-    <h2>Who this is for</h2>
-    <div class="two-col">
-      <div>
-        <h3>This is for you if</h3>
-        <ul>
-          <li>$30k+/month spend</li>
-          <li>Scaling on CPL / MQLs</li>
-          <li>Revenue decoupled</li>
-        </ul>
-      </div>
-      <div>
-        <h3>This is NOT for you if</h3>
-        <ul>
-          <li>You want optimization</li>
-          <li>You want growth hacks</li>
-          <li>You want an agency</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 </div>
 
 <footer>
   <h2>Stop scaling on assumptions.</h2>
   <p class="secondary">Verify whether your growth signal is still economically valid.</p>
-  <a class="btn-primary">Run Free Diagnostic</a>
+  <a class="btn-primary">Request Diagnostic Review</a>
 </footer>
 
 <!-- MODAL -->
 <div id="modal" class="modal">
   <div class="modal-content">
-    <h2>Run Free Diagnostic</h2>
-    <p class="secondary">Verification only. No optimization.</p>
+    <h2>Request Diagnostic Review</h2>
+    <p class="secondary">
+      We manually review requests to ensure diagnostic relevance.
+    </p>
 
     <form>
       <label>
         Work email
         <input type="email" required />
       </label>
+
       <label>
         Monthly paid spend
         <select>
@@ -424,7 +382,12 @@
           <option>$100k+</option>
         </select>
       </label>
-      <button type="submit" class="btn-primary">Request Diagnostic</button>
+
+      <p class="secondary">
+        You will receive a confirmation email within 24 hours.
+      </p>
+
+      <button type="submit" class="btn-primary">Request Review</button>
     </form>
 
     <button class="modal-close">Close</button>
