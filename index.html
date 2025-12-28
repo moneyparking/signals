@@ -7,19 +7,19 @@
 
   <style>
     :root {
-  --text-primary: #0f172a;
-  --text-secondary: #5f6b63;
+      --text-primary: #0f172a;
+      --text-secondary: #5f6b63;
 
-  --border-muted: #d6e2da;
-  --bg-muted: #f3f7f4;
+      --border-muted: #d6e2da;
+      --bg-muted: #f3f7f4;
 
-  /* Audit Green */
-  --cta-bg: #0f3d2e;
-  --cta-bg-hover: #0b2e22;
-  --cta-text: #ffffff;
+      /* Institutional Audit Green */
+      --cta-bg: #0f3d2e;
+      --cta-bg-hover: #0b2e22;
+      --cta-text: #ffffff;
 
-  --accent-soft: #1f6f54;
-}
+      --accent-soft: #1f6f54;
+    }
 
     * {
       box-sizing: border-box;
@@ -27,16 +27,59 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Text", system-ui, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif;
       color: var(--text-primary);
       background: #ffffff;
       line-height: 1.55;
     }
 
+    /* HEADER */
+    .header {
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-muted);
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      font-size: 14px;
+      text-decoration: none;
+      color: var(--text-secondary);
+    }
+
+    .btn-header {
+      padding: 8px 14px;
+      background: var(--cta-bg);
+      color: var(--cta-text) !important;
+      border-radius: 6px;
+    }
+
+    /* LAYOUT */
     .container {
       max-width: 680px;
       margin: 0 auto;
       padding: 96px 24px;
+    }
+
+    .hero {
+      padding-top: 120px;
+      padding-bottom: 120px;
     }
 
     h1 {
@@ -47,29 +90,23 @@
     }
 
     h2 {
-  font-size: 30px;
-  line-height: 1.25;
-  margin-bottom: 24px;
-  letter-spacing: -0.01em;
-  color: var(--accent-soft);
-}
+      font-size: 30px;
+      line-height: 1.25;
+      margin-bottom: 24px;
+      color: var(--accent-soft);
+    }
 
     h3 {
-      font-size: 20px;
+      font-size: 18px;
       margin-bottom: 12px;
     }
 
     p {
-      margin: 0 0 16px;
+      margin-bottom: 16px;
     }
 
     .secondary {
       color: var(--text-secondary);
-    }
-
-    .hero {
-      padding-top: 120px;
-      padding-bottom: 120px;
     }
 
     .clarifier {
@@ -78,6 +115,7 @@
       margin-top: 8px;
     }
 
+    /* CTA */
     .cta-group {
       margin-top: 32px;
     }
@@ -90,7 +128,7 @@
       border-radius: 6px;
       text-decoration: none;
       font-weight: 500;
-      transition: background 0.15s ease;
+      cursor: pointer;
     }
 
     .btn-primary:hover {
@@ -98,7 +136,6 @@
     }
 
     .cta-secondary {
-      display: inline-block;
       margin-left: 16px;
       font-size: 15px;
       color: var(--text-secondary);
@@ -115,6 +152,12 @@
       margin-top: 120px;
     }
 
+    .section-block {
+      background: #f6faf8;
+      padding: 72px 56px;
+      border-radius: 16px;
+    }
+
     ul {
       padding-left: 18px;
     }
@@ -123,12 +166,7 @@
       margin-bottom: 8px;
     }
 
-    .divider {
-      height: 1px;
-      background: var(--border-muted);
-      margin: 96px 0;
-    }
-
+    /* HOW IT WORKS */
     .steps {
       border-left: 2px solid var(--border-muted);
       padding-left: 24px;
@@ -138,14 +176,24 @@
       margin-bottom: 32px;
     }
 
+    /* LIMITATION BOX */
     .box-muted {
-  background: #eef5f1;
-  border: 1px solid #cfe3d8;
-  padding: 20px 22px;
-  border-radius: 8px;
-  margin-top: 24px;
-  font-size: 15px;
-}
+      background: #eef5f1;
+      border: 1px solid #cfe3d8;
+      padding: 20px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      font-size: 15px;
+    }
+
+    /* PRICING */
+    .pricing-card {
+      border: 1px solid #cfe3d8;
+      background: #f1f8f4;
+      padding: 48px;
+      border-radius: 16px;
+      margin-top: 24px;
+    }
 
     .price {
       font-size: 32px;
@@ -160,159 +208,237 @@
     }
 
     footer {
-      padding: 96px 24px 120px;
+      padding: 120px 24px;
       text-align: center;
     }
 
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 200;
+    }
+
+    .modal-content {
+      background: white;
+      max-width: 420px;
+      margin: 10% auto;
+      padding: 32px;
+      border-radius: 12px;
+    }
+
+    .modal-content form {
+      margin-top: 24px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid var(--border-muted);
+    }
+
+    .modal-close {
+      margin-top: 16px;
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+
     @media (max-width: 640px) {
-      h1 {
-        font-size: 38px;
-      }
-      .two-col {
-        grid-template-columns: 1fr;
-      }
+      h1 { font-size: 38px; }
+      .two-col { grid-template-columns: 1fr; }
+      .section-block { padding: 48px 24px; }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container hero">
-    <h1>Your growth metrics may be lying to you.</h1>
-    <p class="secondary">
-      We detect when paid acquisition is scaled on signals that no longer correlate with revenue — and calculate the economic loss.
-    </p>
-    <div class="clarifier">
-      For B2B SaaS with paid acquisition and sales-assisted revenue.
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">Economic Signal Diagnostic</div>
+    <nav>
+      <a href="#what">What we check</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a class="btn-header">Run Diagnostic</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container hero">
+  <h1>Your growth metrics may be lying to you.</h1>
+  <p class="secondary">
+    We detect when paid acquisition is scaled on signals that no longer correlate with revenue — and calculate the economic loss.
+  </p>
+  <div class="clarifier">
+    For B2B SaaS with paid acquisition and sales-assisted revenue.
+  </div>
+
+  <div class="cta-group">
+    <a class="btn-primary">Run Free Diagnostic</a>
+    <a class="cta-secondary" href="#what">See what we actually analyze →</a>
+  </div>
+
+  <div class="microcopy">
+    No optimization. No advice. No commitments.
+  </div>
+</div>
+
+<div class="container">
+
+  <section class="section-block">
+    <h2>Most SaaS don’t lose money because of channels.</h2>
+    <p>CPL looks fine. Trials go up. Revenue stays flat.</p>
+    <p><strong>This is not a marketing problem.<br/>It’s a signal integrity problem.</strong></p>
+  </section>
+
+  <section id="what">
+    <h2>What this diagnostic verifies</h2>
+    <p><strong>This free diagnostic answers one question only:</strong></p>
+    <p>Does the signal you use to scale paid acquisition still causally correlate with revenue?</p>
+
+    <h3>We analyze</h3>
+    <ul>
+      <li>Paid spend → trial → activation → deal linkage</li>
+      <li>Scaling trigger metrics</li>
+      <li>Rule-based violations</li>
+    </ul>
+
+    <h3>We explicitly do NOT</h3>
+    <ul>
+      <li>Optimize campaigns</li>
+      <li>Suggest channels</li>
+      <li>Sell marketing services</li>
+    </ul>
+  </section>
+
+  <section id="how">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>Step 1 — Connect data (read-only)</h3>
+        <p>Ads, CRM, product events. Nothing is modified.</p>
+      </div>
+      <div class="step">
+        <h3>Step 2 — Apply deterministic rules</h3>
+        <p>No AI decisions. No assumptions.</p>
+      </div>
+      <div class="step">
+        <h3>Step 3 — Get a verdict</h3>
+        <p>Clear economic verdict with money attached.</p>
+      </div>
+    </div>
+    <p class="secondary">Typical delivery: 48–72 hours after connection.</p>
+  </section>
+
+  <section class="section-block">
+    <h2>What you receive (free)</h2>
+    <ul>
+      <li>Scaling defect existence</li>
+      <li>Affected domains</li>
+      <li>Annual loss range</li>
+      <li>Confidence level</li>
+    </ul>
+
+    <div class="box-muted">
+      This report does not include remediation steps.
     </div>
 
     <div class="cta-group">
-      <a href="#" class="btn-primary">Run Free Diagnostic</a>
-      <a href="#" class="cta-secondary">See what we actually analyze →</a>
+      <a class="btn-primary">Run Free Diagnostic</a>
     </div>
+  </section>
 
-    <div class="microcopy">
-      No optimization. No advice. No commitments.
-    </div>
-  </div>
-
-  <div class="container">
-    <section>
-      <h2>Most SaaS don’t lose money because of channels.</h2>
-      <p>
-        They lose money because scaling decisions are based on signals that used to work — but no longer do at current scale.
-      </p>
-      <p>CPL looks fine.<br/>Trials go up.<br/>Revenue stays flat.</p>
-      <p><strong>This is not a marketing problem.<br/>It’s a signal integrity problem.</strong></p>
-    </section>
-
-    <section>
-      <h2>What this diagnostic verifies</h2>
-      <p><strong>This free diagnostic answers one question only:</strong></p>
-      <p>
-        Does the signal you use to scale paid acquisition still causally correlate with revenue?
-      </p>
-
-      <h3>We analyze</h3>
+  <section id="pricing">
+    <h2>Full Economic Diagnostic</h2>
+    <div class="pricing-card">
+      <p>For teams that need certainty.</p>
       <ul>
-        <li>Paid spend → trial → activation → deal linkage</li>
-        <li>Which metrics trigger scaling decisions</li>
-        <li>Rule-based violations across funnel stages</li>
-      </ul>
-
-      <h3>We explicitly do NOT</h3>
-      <ul>
-        <li>Optimize campaigns</li>
-        <li>Suggest channels</li>
-        <li>Sell marketing services</li>
-      </ul>
-
-      <p class="secondary">(If you’re looking for growth hacks — this is not for you.)</p>
-    </section>
-
-    <section>
-      <h2>How it works</h2>
-      <div class="steps">
-        <div class="step">
-          <h3>Step 1 — Connect data (read-only)</h3>
-          <p>Google Ads, LinkedIn Ads, CRM, product events. We never modify anything.</p>
-        </div>
-        <div class="step">
-          <h3>Step 2 — Apply deterministic rules</h3>
-          <p>No machine learning. No assumptions. Only predefined economic rules.</p>
-        </div>
-        <div class="step">
-          <h3>Step 3 — Get a verdict</h3>
-          <p>Not a dashboard. A clear economic verdict with money attached.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>What you receive (free)</h2>
-      <ul>
-        <li>Whether a scaling defect exists</li>
-        <li>Which domains are affected (marketing, product, sales)</li>
-        <li>Estimated annual loss range</li>
-        <li>Confidence level</li>
-      </ul>
-
-      <div class="box-muted">
-        <strong>Important:</strong> This report does not include remediation steps.
-      </div>
-
-      <div class="cta-group">
-        <a href="#" class="btn-primary">Run Free Diagnostic</a>
-      </div>
-    </section>
-
-    <section>
-      <h2>Full Economic Diagnostic</h2>
-      <p>For teams that need certainty — not ranges.</p>
-
-      <ul>
-        <li>Exact annualized loss (single number)</li>
+        <li>Exact annualized loss</li>
         <li>Root cause ontology</li>
-        <li>Allowed corrective decision paths</li>
-        <li>Board-ready PDF report</li>
+        <li>Corrective decision paths</li>
+        <li>Board-ready PDF</li>
       </ul>
-
       <div class="price">$1,200 — one-time</div>
+      <a class="btn-primary">Get Full Diagnostic</a>
+    </div>
+  </section>
 
-      <a href="#" class="btn-primary">Get Full Diagnostic</a>
-    </section>
-
-    <section>
-      <h2>Who this is for</h2>
-      <div class="two-col">
-        <div>
-          <h3>This is for you if</h3>
-          <ul>
-            <li>You spend $30k+/month on paid acquisition</li>
-            <li>You scale based on CPL, trials, or MQLs</li>
-            <li>Revenue no longer follows spend</li>
-          </ul>
-        </div>
-        <div>
-          <h3>This is NOT for you if</h3>
-          <ul>
-            <li>You want campaign optimization</li>
-            <li>You want growth hacks</li>
-            <li>You want an agency</li>
-          </ul>
-        </div>
+  <section>
+    <h2>Who this is for</h2>
+    <div class="two-col">
+      <div>
+        <h3>This is for you if</h3>
+        <ul>
+          <li>$30k+/month spend</li>
+          <li>Scaling on CPL / MQLs</li>
+          <li>Revenue decoupled</li>
+        </ul>
       </div>
-    </section>
-  </div>
+      <div>
+        <h3>This is NOT for you if</h3>
+        <ul>
+          <li>You want optimization</li>
+          <li>You want growth hacks</li>
+          <li>You want an agency</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
 
-  <footer>
-    <h2>Stop scaling on assumptions.</h2>
-    <p class="secondary">
-      Verify whether your growth signal is still economically valid.
-    </p>
-    <a href="#" class="btn-primary">Run Free Diagnostic</a>
-  </footer>
+<footer>
+  <h2>Stop scaling on assumptions.</h2>
+  <p class="secondary">Verify whether your growth signal is still economically valid.</p>
+  <a class="btn-primary">Run Free Diagnostic</a>
+</footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h2>Run Free Diagnostic</h2>
+    <p class="secondary">Verification only. No optimization.</p>
+
+    <form>
+      <label>
+        Work email
+        <input type="email" required />
+      </label>
+      <label>
+        Monthly paid spend
+        <select>
+          <option>$30k–50k</option>
+          <option>$50k–100k</option>
+          <option>$100k+</option>
+        </select>
+      </label>
+      <button type="submit" class="btn-primary">Request Diagnostic</button>
+    </form>
+
+    <button class="modal-close">Close</button>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('modal');
+  document.querySelectorAll('.btn-primary, .btn-header').forEach(btn => {
+    btn.onclick = () => modal.style.display = 'block';
+  });
+  document.querySelector('.modal-close').onclick = () =>
+    modal.style.display = 'none';
+</script>
 
 </body>
 </html>
-
