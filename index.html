@@ -9,14 +9,9 @@
     :root {
       --text-primary: #0f172a;
       --text-secondary: #5f6b63;
-
       --border-muted: #d6e2da;
       --bg-muted: #f3f7f4;
-
-      /* Institutional audit green */
       --audit-green: #0f3d2e;
-
-      /* Neutral graphite CTA */
       --cta-bg: #1f2937;
       --cta-bg-hover: #111827;
       --cta-text: #ffffff;
@@ -32,19 +27,16 @@
       line-height: 1.55;
     }
 
-    /* AUTHORITY BAR */
     .authority-bar {
-      width: 100%;
       background: #0f172a;
       color: #e5e7eb;
       font-size: 13px;
-      letter-spacing: 0.06em;
       text-transform: uppercase;
       text-align: center;
       padding: 10px 16px;
+      letter-spacing: 0.06em;
     }
 
-    /* HEADER */
     .header {
       position: sticky;
       top: 0;
@@ -78,19 +70,17 @@
     .btn-header {
       padding: 8px 14px;
       background: var(--cta-bg);
-      color: var(--cta-text) !important;
+      color: white !important;
       border-radius: 6px;
       cursor: pointer;
     }
 
-    /* LAYOUT */
     .container {
       max-width: 680px;
       margin: 0 auto;
       padding: 96px 24px;
     }
 
-    /* HERO */
     .hero-institutional {
       border-top: 6px solid var(--audit-green);
       padding-top: 64px;
@@ -115,7 +105,6 @@
       font-size: 48px;
       line-height: 1.15;
       margin-bottom: 24px;
-      letter-spacing: -0.02em;
     }
 
     .hero-lead {
@@ -130,32 +119,18 @@
       margin: 32px 0;
     }
 
-    .hero-note {
-      display: inline-block;
-      margin-left: 16px;
-      font-size: 13px;
-      color: var(--text-secondary);
-    }
-
-    /* CTA */
     .cta-group { margin-top: 32px; }
 
     .btn-primary {
-      display: inline-block;
       background: var(--cta-bg);
-      color: var(--cta-text);
+      color: white;
       padding: 14px 22px;
       border-radius: 6px;
       text-decoration: none;
-      font-weight: 500;
       cursor: pointer;
+      display: inline-block;
     }
 
-    .btn-primary:hover {
-      background: var(--cta-bg-hover);
-    }
-
-    /* INSTITUTIONAL STRIP */
     .institutional-strip {
       font-size: 14px;
       padding: 16px 20px;
@@ -164,111 +139,39 @@
       color: var(--text-secondary);
     }
 
-    /* SECTIONS */
     section { margin-top: 120px; }
 
     h2 {
       font-size: 30px;
-      line-height: 1.25;
-      margin-bottom: 24px;
       color: var(--audit-green);
+      margin-bottom: 24px;
     }
 
-    h3 {
-      font-size: 18px;
-      margin-bottom: 12px;
+    .method-artifact {
+      margin-top: 120px;
+      padding: 48px;
+      border: 1px solid var(--border-muted);
+      border-radius: 12px;
+      background: #fbfdfc;
     }
 
-    p { margin-bottom: 16px; }
+    .rule-block {
+      background: #0f172a;
+      color: #e5e7eb;
+      padding: 24px;
+      border-radius: 8px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 24px 0;
+    }
 
     ul { padding-left: 18px; }
     li { margin-bottom: 8px; }
 
-    .section-block {
-      background: #f6faf8;
-      padding: 72px 56px;
-      border-radius: 16px;
-    }
-
-    /* PROCESS */
-    .steps {
-      border-left: 2px solid var(--border-muted);
-      padding-left: 24px;
-    }
-
-    .step { margin-bottom: 32px; }
-
-    /* LIMITATION */
-    .box-muted {
-      background: #eef5f1;
-      border: 1px solid #cfe3d8;
-      padding: 20px 22px;
-      border-radius: 8px;
-      margin-top: 24px;
-      font-size: 15px;
-    }
-
-    /* PRICING */
-    .pricing-card {
-      border: 1px solid #cfe3d8;
-      background: #f1f8f4;
-      padding: 48px;
-      border-radius: 16px;
-      margin-top: 24px;
-    }
-
-    .price {
-      font-size: 32px;
-      margin: 16px 0;
-    }
-
     footer {
       padding: 120px 24px;
       text-align: center;
-    }
-
-    /* MODAL */
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.45);
-      z-index: 200;
-    }
-
-    .modal-content {
-      background: white;
-      max-width: 420px;
-      margin: 10% auto;
-      padding: 32px;
-      border-radius: 12px;
-    }
-
-    label {
-      display: block;
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 6px;
-      border-radius: 6px;
-      border: 1px solid var(--border-muted);
-    }
-
-    .modal-close {
-      margin-top: 16px;
-      background: none;
-      border: none;
-      color: var(--text-secondary);
-      cursor: pointer;
-    }
-
-    @media (max-width: 640px) {
-      h1 { font-size: 38px; }
-      .section-block { padding: 48px 24px; }
     }
   </style>
 </head>
@@ -293,14 +196,9 @@
 
 <div class="container hero-institutional">
   <div class="hero-label">Independent Economic Review</div>
-  <div class="jurisdiction">
-    Applied economic review · Paid acquisition systems
-  </div>
+  <div class="jurisdiction">Applied economic review · Paid acquisition systems</div>
 
-  <h1>
-    Your growth metrics<br/>
-    may be lying to you.
-  </h1>
+  <h1>Your growth metrics<br/>may be lying to you.</h1>
 
   <p class="hero-lead">
     We verify whether the signal you scale paid acquisition on still causally correlates
@@ -311,9 +209,6 @@
 
   <div class="cta-group">
     <a class="btn-primary">Request Independent Review</a>
-    <span class="hero-note">
-      Screening-level review · Manual verification · 48–72h
-    </span>
   </div>
 </div>
 
@@ -322,17 +217,24 @@
     Deterministic economic review · Rule-based · Opinion-free
   </div>
 
-  <section class="section-block">
-    <h2>Why this review exists</h2>
-    <p>CPL holds. Trials increase. Revenue plateaus.</p>
-    <p><strong>This is not a marketing failure.<br/>It is a signal integrity failure.</strong></p>
+  <section class="method-artifact">
+    <h2>Signal Integrity Framework (excerpt)</h2>
+    <pre class="rule-block">
+Rule S-04
+IF scaling trigger = CPL
+AND revenue lag > 2 sales cycles
+THEN signal validity = broken
+
+Loss calculated from marginal CAC delta
+    </pre>
+    <p class="secondary">
+      This is one of the predefined deterministic rules used in the review.
+      Full rule set is not public.
+    </p>
   </section>
 
   <section id="scope">
-    <h2>Scope of review</h2>
-    <p class="secondary">
-      Screening-level verification, not a full economic assessment.
-    </p>
+    <h2>Scope of review (what is evaluated)</h2>
     <ul>
       <li>Spend → trial → activation → deal linkage</li>
       <li>Scaling trigger signals</li>
@@ -341,39 +243,18 @@
   </section>
 
   <section id="process">
-    <h2>Review process</h2>
-    <div class="steps">
-      <div class="step">
-        <h3>1. Data connection (read-only)</h3>
-        <p>Ads, CRM, product events. Nothing is modified.</p>
-      </div>
-      <div class="step">
-        <h3>2. Deterministic evaluation</h3>
-        <p>No AI decisions. No assumptions.</p>
-      </div>
-      <div class="step">
-        <h3>3. Economic verdict</h3>
-        <p>Clear outcome with quantified loss.</p>
-      </div>
-    </div>
-    <p class="secondary">Typical delivery: 48–72 hours.</p>
+    <h2>Review process (how it is conducted)</h2>
+    <ul>
+      <li>Read-only data connection</li>
+      <li>Deterministic rule evaluation</li>
+      <li>Economic verdict with quantified loss</li>
+    </ul>
   </section>
 
   <section id="assessment">
     <h2>Full economic assessment</h2>
-    <p class="secondary">
-      Formal assessment suitable for executive and board decisions.
-    </p>
-    <div class="pricing-card">
-      <ul>
-        <li>Exact annualized loss</li>
-        <li>Root cause ontology</li>
-        <li>Corrective decision paths</li>
-        <li>Board-ready PDF</li>
-      </ul>
-      <div class="price">$1,200 — one-time</div>
-      <a class="btn-primary">Request Independent Review</a>
-    </div>
+    <p>$1,200 — one-time · Board-ready PDF</p>
+    <a class="btn-primary">Request Independent Review</a>
   </section>
 </div>
 
@@ -382,47 +263,6 @@
   <p class="secondary">Verify whether your growth signal is economically valid.</p>
   <a class="btn-primary">Request Independent Review</a>
 </footer>
-
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <h2>Request Independent Review</h2>
-    <p class="secondary">
-      All requests are manually reviewed for relevance.
-    </p>
-
-    <form>
-      <label>
-        Work email
-        <input type="email" required />
-      </label>
-      <label>
-        Monthly paid spend
-        <select>
-          <option>$30k–50k</option>
-          <option>$50k–100k</option>
-          <option>$100k+</option>
-        </select>
-      </label>
-
-      <p class="secondary">
-        You will receive a confirmation within 24 hours.
-      </p>
-
-      <button type="submit" class="btn-primary">Submit Review Request</button>
-    </form>
-
-    <button class="modal-close">Close</button>
-  </div>
-</div>
-
-<script>
-  const modal = document.getElementById('modal');
-  document.querySelectorAll('.btn-primary, .btn-header').forEach(btn => {
-    btn.onclick = () => modal.style.display = 'block';
-  });
-  document.querySelector('.modal-close').onclick = () =>
-    modal.style.display = 'none';
-</script>
 
 </body>
 </html>
