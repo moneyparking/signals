@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Economic Signal Diagnostic</title>
+  <title>Economic Signal Audit</title>
 
   <style>
     :root {
@@ -13,11 +13,13 @@
       --border-muted: #d6e2da;
       --bg-muted: #f3f7f4;
 
-      --cta-bg: #0f3d2e;
-      --cta-bg-hover: #0b2e22;
-      --cta-text: #ffffff;
+      /* Institutional Audit Green (NOT CTA) */
+      --audit-green: #0f3d2e;
 
-      --accent-soft: #1f6f54;
+      /* Neutral Graphite CTA */
+      --cta-bg: #1f2937;
+      --cta-bg-hover: #111827;
+      --cta-text: #ffffff;
     }
 
     * { box-sizing: border-box; }
@@ -51,6 +53,7 @@
     .logo {
       font-weight: 600;
       font-size: 14px;
+      letter-spacing: 0.04em;
     }
 
     nav a {
@@ -75,9 +78,19 @@
       padding: 96px 24px;
     }
 
-    .hero {
-      padding-top: 120px;
+    /* HERO — INSTITUTIONAL */
+    .hero-institutional {
+      border-top: 6px solid var(--audit-green);
+      padding-top: 64px;
       padding-bottom: 120px;
+    }
+
+    .hero-label {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--audit-green);
+      margin-bottom: 24px;
     }
 
     h1 {
@@ -87,26 +100,23 @@
       letter-spacing: -0.02em;
     }
 
-    h2 {
-      font-size: 30px;
-      line-height: 1.25;
-      margin-bottom: 24px;
-      color: var(--accent-soft);
-    }
-
-    h3 {
-      font-size: 18px;
-      margin-bottom: 12px;
-    }
-
-    p { margin-bottom: 16px; }
-
-    .secondary { color: var(--text-secondary); }
-
-    .clarifier {
-      font-size: 14px;
+    .hero-lead {
+      max-width: 560px;
       color: var(--text-secondary);
-      margin-top: 8px;
+    }
+
+    .hero-divider {
+      height: 1px;
+      width: 120px;
+      background: #cfe3d8;
+      margin: 32px 0;
+    }
+
+    .hero-note {
+      display: inline-block;
+      margin-left: 16px;
+      font-size: 13px;
+      color: var(--text-secondary);
     }
 
     /* CTA */
@@ -127,29 +137,40 @@
       background: var(--cta-bg-hover);
     }
 
-    .cta-secondary {
-      margin-left: 16px;
-      font-size: 15px;
+    /* INSTITUTIONAL STRIP */
+    .institutional-strip {
+      font-size: 14px;
+      padding: 16px 20px;
+      border-left: 4px solid var(--audit-green);
+      background: var(--bg-muted);
       color: var(--text-secondary);
-      text-decoration: none;
     }
 
-    .microcopy {
-      font-size: 13px;
-      color: var(--text-secondary);
-      margin-top: 12px;
-    }
-
+    /* SECTIONS */
     section { margin-top: 120px; }
+
+    h2 {
+      font-size: 30px;
+      line-height: 1.25;
+      margin-bottom: 24px;
+      color: var(--audit-green);
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    p { margin-bottom: 16px; }
+
+    ul { padding-left: 18px; }
+    li { margin-bottom: 8px; }
 
     .section-block {
       background: #f6faf8;
       padding: 72px 56px;
       border-radius: 16px;
     }
-
-    ul { padding-left: 18px; }
-    li { margin-bottom: 8px; }
 
     /* HOW IT WORKS */
     .steps {
@@ -183,13 +204,6 @@
       margin: 16px 0;
     }
 
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      margin-top: 32px;
-    }
-
     footer {
       padding: 120px 24px;
       text-align: center;
@@ -200,7 +214,7 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.45);
       z-index: 200;
     }
 
@@ -236,7 +250,6 @@
 
     @media (max-width: 640px) {
       h1 { font-size: 38px; }
-      .two-col { grid-template-columns: 1fr; }
       .section-block { padding: 48px 24px; }
     }
   </style>
@@ -246,100 +259,86 @@
 
 <header class="header">
   <div class="header-inner">
-    <div class="logo">Economic Signal Diagnostic</div>
+    <div class="logo">ECONOMIC SIGNAL AUDIT</div>
     <nav>
-      <a href="#what">What we check</a>
-      <a href="#how">How it works</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#what">Scope</a>
+      <a href="#how">Process</a>
+      <a href="#pricing">Assessment</a>
       <a class="btn-header">Request Diagnostic Review</a>
     </nav>
   </div>
 </header>
 
-<div class="container hero">
-  <h1>Your growth metrics may be lying to you.</h1>
-  <p class="secondary">
-    We detect when paid acquisition is scaled on signals that no longer correlate with revenue — and calculate the economic loss.
+<div class="container hero-institutional">
+  <div class="hero-label">Economic Signal Audit</div>
+
+  <h1>
+    Your growth metrics<br/>
+    may be lying to you.
+  </h1>
+
+  <p class="hero-lead">
+    We verify whether the signal you scale paid acquisition on still causally correlates
+    with revenue — and quantify the economic loss.
   </p>
-  <div class="clarifier">
-    For B2B SaaS with paid acquisition and sales-assisted revenue.
-  </div>
+
+  <div class="hero-divider"></div>
 
   <div class="cta-group">
     <a class="btn-primary">Request Diagnostic Review</a>
-    <a class="cta-secondary" href="#what">See what we actually analyze →</a>
-  </div>
-
-  <div class="microcopy">
-    No optimization. No advice. No commitments.
+    <span class="hero-note">
+      Screening-level review · Manual verification · 48–72h
+    </span>
   </div>
 </div>
 
 <div class="container">
+  <div class="institutional-strip">
+    Deterministic economic review · Rule-based · Opinion-free
+  </div>
 
   <section class="section-block">
-    <h2>Most SaaS don’t lose money because of channels.</h2>
-    <p>CPL looks fine. Trials go up. Revenue stays flat.</p>
-    <p><strong>This is not a marketing problem.<br/>It’s a signal integrity problem.</strong></p>
+    <h2>Why this exists</h2>
+    <p>CPL holds. Trials increase. Revenue plateaus.</p>
+    <p><strong>This is not a marketing failure.<br/>It is a signal integrity failure.</strong></p>
   </section>
 
   <section id="what">
-    <h2>What this diagnostic verifies</h2>
+    <h2>Scope of the diagnostic</h2>
     <p class="secondary">
-      This is a screening-level diagnostic, not a full economic assessment.
+      Screening-level verification, not a full economic assessment.
     </p>
-
-    <h3>We analyze</h3>
     <ul>
-      <li>Paid spend → trial → activation → deal linkage</li>
-      <li>Scaling trigger metrics</li>
-      <li>Rule-based violations</li>
+      <li>Spend → trial → activation → deal linkage</li>
+      <li>Scaling trigger signals</li>
+      <li>Deterministic rule violations</li>
     </ul>
   </section>
 
   <section id="how">
-    <h2>How it works</h2>
+    <h2>Process</h2>
     <div class="steps">
       <div class="step">
-        <h3>Step 1 — Connect data (read-only)</h3>
+        <h3>1. Data connection (read-only)</h3>
         <p>Ads, CRM, product events. Nothing is modified.</p>
       </div>
       <div class="step">
-        <h3>Step 2 — Apply deterministic rules</h3>
+        <h3>2. Deterministic evaluation</h3>
         <p>No AI decisions. No assumptions.</p>
       </div>
       <div class="step">
-        <h3>Step 3 — Get a verdict</h3>
-        <p>Clear economic verdict with money attached.</p>
+        <h3>3. Economic verdict</h3>
+        <p>Clear outcome with quantified loss.</p>
       </div>
     </div>
-    <p class="secondary">Typical delivery: 48–72 hours after connection.</p>
-  </section>
-
-  <section class="section-block">
-    <h2>What you receive (free)</h2>
-    <ul>
-      <li>Scaling defect existence</li>
-      <li>Affected domains</li>
-      <li>Annual loss range</li>
-      <li>Confidence level</li>
-    </ul>
-
-    <div class="box-muted">
-      This report does not include remediation steps.
-    </div>
-
-    <div class="cta-group">
-      <a class="btn-primary">Request Diagnostic Review</a>
-    </div>
+    <p class="secondary">Typical delivery: 48–72 hours.</p>
   </section>
 
   <section id="pricing">
-    <h2>Full Economic Diagnostic</h2>
+    <h2>Full Economic Assessment</h2>
     <p class="secondary">
-      This is a formal economic assessment suitable for executive and board decisions.
+      Formal assessment suitable for executive and board decisions.
     </p>
-
     <div class="pricing-card">
       <ul>
         <li>Exact annualized loss</li>
@@ -351,21 +350,19 @@
       <a class="btn-primary">Request Diagnostic Review</a>
     </div>
   </section>
-
 </div>
 
 <footer>
   <h2>Stop scaling on assumptions.</h2>
-  <p class="secondary">Verify whether your growth signal is still economically valid.</p>
+  <p class="secondary">Verify whether your growth signal is economically valid.</p>
   <a class="btn-primary">Request Diagnostic Review</a>
 </footer>
 
-<!-- MODAL -->
 <div id="modal" class="modal">
   <div class="modal-content">
     <h2>Request Diagnostic Review</h2>
     <p class="secondary">
-      We manually review requests to ensure diagnostic relevance.
+      All requests are manually reviewed for relevance.
     </p>
 
     <form>
@@ -373,7 +370,6 @@
         Work email
         <input type="email" required />
       </label>
-
       <label>
         Monthly paid spend
         <select>
@@ -384,7 +380,7 @@
       </label>
 
       <p class="secondary">
-        You will receive a confirmation email within 24 hours.
+        You will receive a confirmation within 24 hours.
       </p>
 
       <button type="submit" class="btn-primary">Request Review</button>
