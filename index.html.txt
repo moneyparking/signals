@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Economic Signal Diagnostic</title>
+
+  <style>
+    :root {
+      --text-primary: #111111;
+      --text-secondary: #5f6368;
+      --border-muted: #e0e0e0;
+      --bg-muted: #f7f8f9;
+      --cta-bg: #1f2937;
+      --cta-bg-hover: #111827;
+      --cta-text: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Text", system-ui, sans-serif;
+      color: var(--text-primary);
+      background: #ffffff;
+      line-height: 1.55;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 96px 24px;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 1.15;
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 1.25;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    .secondary {
+      color: var(--text-secondary);
+    }
+
+    .hero {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+
+    .clarifier {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-top: 8px;
+    }
+
+    .cta-group {
+      margin-top: 32px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--cta-bg);
+      color: var(--cta-text);
+      padding: 14px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--cta-bg-hover);
+    }
+
+    .cta-secondary {
+      display: inline-block;
+      margin-left: 16px;
+      font-size: 15px;
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .microcopy {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 12px;
+    }
+
+    section {
+      margin-top: 120px;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border-muted);
+      margin: 96px 0;
+    }
+
+    .steps {
+      border-left: 2px solid var(--border-muted);
+      padding-left: 24px;
+    }
+
+    .step {
+      margin-bottom: 32px;
+    }
+
+    .box-muted {
+      background: var(--bg-muted);
+      padding: 20px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      font-size: 15px;
+    }
+
+    .price {
+      font-size: 32px;
+      margin: 16px 0;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 32px;
+    }
+
+    footer {
+      padding: 96px 24px 120px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 38px;
+      }
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container hero">
+    <h1>Your growth metrics may be lying to you.</h1>
+    <p class="secondary">
+      We detect when paid acquisition is scaled on signals that no longer correlate with revenue — and calculate the economic loss.
+    </p>
+    <div class="clarifier">
+      For B2B SaaS with paid acquisition and sales-assisted revenue.
+    </div>
+
+    <div class="cta-group">
+      <a href="#" class="btn-primary">Run Free Diagnostic</a>
+      <a href="#" class="cta-secondary">See what we actually analyze →</a>
+    </div>
+
+    <div class="microcopy">
+      No optimization. No advice. No commitments.
+    </div>
+  </div>
+
+  <div class="container">
+    <section>
+      <h2>Most SaaS don’t lose money because of channels.</h2>
+      <p>
+        They lose money because scaling decisions are based on signals that used to work — but no longer do at current scale.
+      </p>
+      <p>CPL looks fine.<br/>Trials go up.<br/>Revenue stays flat.</p>
+      <p><strong>This is not a marketing problem.<br/>It’s a signal integrity problem.</strong></p>
+    </section>
+
+    <section>
+      <h2>What this diagnostic verifies</h2>
+      <p><strong>This free diagnostic answers one question only:</strong></p>
+      <p>
+        Does the signal you use to scale paid acquisition still causally correlate with revenue?
+      </p>
+
+      <h3>We analyze</h3>
+      <ul>
+        <li>Paid spend → trial → activation → deal linkage</li>
+        <li>Which metrics trigger scaling decisions</li>
+        <li>Rule-based violations across funnel stages</li>
+      </ul>
+
+      <h3>We explicitly do NOT</h3>
+      <ul>
+        <li>Optimize campaigns</li>
+        <li>Suggest channels</li>
+        <li>Sell marketing services</li>
+      </ul>
+
+      <p class="secondary">(If you’re looking for growth hacks — this is not for you.)</p>
+    </section>
+
+    <section>
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>Step 1 — Connect data (read-only)</h3>
+          <p>Google Ads, LinkedIn Ads, CRM, product events. We never modify anything.</p>
+        </div>
+        <div class="step">
+          <h3>Step 2 — Apply deterministic rules</h3>
+          <p>No machine learning. No assumptions. Only predefined economic rules.</p>
+        </div>
+        <div class="step">
+          <h3>Step 3 — Get a verdict</h3>
+          <p>Not a dashboard. A clear economic verdict with money attached.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What you receive (free)</h2>
+      <ul>
+        <li>Whether a scaling defect exists</li>
+        <li>Which domains are affected (marketing, product, sales)</li>
+        <li>Estimated annual loss range</li>
+        <li>Confidence level</li>
+      </ul>
+
+      <div class="box-muted">
+        <strong>Important:</strong> This report does not include remediation steps.
+      </div>
+
+      <div class="cta-group">
+        <a href="#" class="btn-primary">Run Free Diagnostic</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Full Economic Diagnostic</h2>
+      <p>For teams that need certainty — not ranges.</p>
+
+      <ul>
+        <li>Exact annualized loss (single number)</li>
+        <li>Root cause ontology</li>
+        <li>Allowed corrective decision paths</li>
+        <li>Board-ready PDF report</li>
+      </ul>
+
+      <div class="price">$1,200 — one-time</div>
+
+      <a href="#" class="btn-primary">Get Full Diagnostic</a>
+    </section>
+
+    <section>
+      <h2>Who this is for</h2>
+      <div class="two-col">
+        <div>
+          <h3>This is for you if</h3>
+          <ul>
+            <li>You spend $30k+/month on paid acquisition</li>
+            <li>You scale based on CPL, trials, or MQLs</li>
+            <li>Revenue no longer follows spend</li>
+          </ul>
+        </div>
+        <div>
+          <h3>This is NOT for you if</h3>
+          <ul>
+            <li>You want campaign optimization</li>
+            <li>You want growth hacks</li>
+            <li>You want an agency</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <h2>Stop scaling on assumptions.</h2>
+    <p class="secondary">
+      Verify whether your growth signal is still economically valid.
+    </p>
+    <a href="#" class="btn-primary">Run Free Diagnostic</a>
+  </footer>
+
+</body>
+</html>
