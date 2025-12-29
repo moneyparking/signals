@@ -4,38 +4,296 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Independent Economic Signal Review</title>
+
   <style>
-    body{margin:0;font-family:Arial,sans-serif;color:#0f172a;background:#fff;}
-    .container{max-width:700px;margin:80px auto;padding:0 16px;}
-    h1{font-size:40px;line-height:1.2;margin-bottom:16px;}
-    p{margin-bottom:16px;font-size:16px;color:#4a4a4a;}
-    a.btn{display:inline-block;padding:14px 24px;background:#1f2937;color:#fff;text-decoration:none;border-radius:6px;font-size:16px;}
-    a.link{color:#0f3d2e;text-decoration:underline;font-size:14px;}
-    hr{margin:48px 0;border:none;border-top:1px solid #eaeaea;}
-    .price-note{font-size:14px;color:#6b7280;margin-top:8px;}
+    :root {
+      --text-primary:#0f172a;
+      --text-secondary:#5f6b63;
+      --border-muted:#d6e2da;
+      --accent:#0f3d2e;
+      --cta:#1f2937;
+      --bg-soft:#f3f7f4;
+    }
+
+    body {
+      margin:0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+      color:var(--text-primary);
+      background:#ffffff;
+      line-height:1.55;
+    }
+
+    header {
+      border-bottom:1px solid var(--border-muted);
+      padding:24px 0;
+    }
+
+    .nav {
+      max-width:960px;
+      margin:0 auto;
+      padding:0 24px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:14px;
+    }
+
+    .brand {
+      font-weight:600;
+      letter-spacing:0.02em;
+    }
+
+    .nav a {
+      color:var(--text-secondary);
+      text-decoration:none;
+      margin-left:20px;
+    }
+
+    .container {
+      max-width:720px;
+      margin:0 auto;
+      padding:96px 24px;
+    }
+
+    h1 {
+      font-size:48px;
+      line-height:1.15;
+      margin-bottom:24px;
+    }
+
+    h2 {
+      font-size:28px;
+      margin-bottom:16px;
+    }
+
+    h3 {
+      font-size:18px;
+      margin-bottom:8px;
+      color:var(--accent);
+    }
+
+    p {
+      font-size:17px;
+      margin-bottom:16px;
+      color:var(--text-secondary);
+    }
+
+    .hero-note {
+      font-size:14px;
+      color:var(--text-secondary);
+      margin-bottom:32px;
+    }
+
+    .btn-primary {
+      display:inline-block;
+      background:var(--cta);
+      color:#ffffff;
+      padding:14px 24px;
+      border-radius:6px;
+      text-decoration:none;
+      font-size:16px;
+    }
+
+    .link-secondary {
+      display:block;
+      margin-top:14px;
+      font-size:14px;
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    .section {
+      padding:96px 0;
+      border-top:1px solid var(--border-muted);
+    }
+
+    .boxed {
+      background:var(--bg-soft);
+      padding:32px;
+      border-left:4px solid var(--accent);
+      margin:32px 0;
+      font-size:16px;
+    }
+
+    ul {
+      padding-left:18px;
+      color:var(--text-secondary);
+    }
+
+    li {
+      margin-bottom:8px;
+    }
+
+    .price {
+      font-size:22px;
+      font-weight:600;
+      margin-bottom:8px;
+    }
+
+    .price-note {
+      font-size:14px;
+      color:var(--text-secondary);
+    }
+
+    footer {
+      border-top:1px solid var(--border-muted);
+      padding:96px 24px;
+      text-align:center;
+    }
   </style>
 </head>
+
 <body>
 
+<!-- HEADER -->
+<header>
+  <div class="nav">
+    <div class="brand">Independent Signal Review</div>
+    <div>
+      <a href="/signals/sample-audit/audit.html">Sample audit</a>
+      <a href="/signals/intake/intake.html">Request review</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
 <div class="container">
-
   <h1>Your growth metrics may be lying to you.</h1>
-  <p>Independent screening · Sample audit available · 48–72h</p>
 
-  <a class="btn" href="/signals/intake/intake.html">Request Independent Review</a><br/>
-  <a class="link" href="/signals/sample-audit/audit.html" target="_blank">View sample economic audit &rarr;</a>
-
-  <hr/>
-
-  <h2>Full Economic Assessment</h2>
-  <p><strong>$1,200 — one-time</strong></p>
-  <p class="price-note">
-    Pricing reflects screening-level economic review. Formal capital allocation assessments are priced separately.
+  <p class="hero-note">
+    Independent economic screening · No optimization · No advisory · 48–72h
   </p>
 
-  <a class="btn" href="/signals/intake/intake.html">Request Independent Review</a>
+  <p>
+    We detect when paid acquisition is scaled on signals
+    that no longer causally correlate with revenue —
+    and quantify the resulting economic loss.
+  </p>
 
+  <div style="margin-top:32px">
+    <a class="btn-primary" href="/signals/intake/intake.html">
+      Run Free Diagnostic
+    </a>
+    <a class="link-secondary" href="/signals/sample-audit/audit.html">
+      View sample economic audit →
+    </a>
+  </div>
 </div>
+
+<!-- WHY -->
+<div class="section">
+  <div class="container">
+    <h2>Why this matters</h2>
+
+    <p>
+      Most B2B SaaS teams do not lose money because of channels.
+    </p>
+
+    <p>
+      They lose money because scaling decisions are still based
+      on signals that worked at a smaller scale —
+      but no longer do.
+    </p>
+
+    <div class="boxed">
+      CPL looks fine.<br/>
+      Trials increase.<br/>
+      Revenue stays flat.
+    </div>
+
+    <p>
+      This is not a marketing problem.<br/>
+      It is a signal integrity problem.
+    </p>
+  </div>
+</div>
+
+<!-- WHAT WE CHECK -->
+<div class="section">
+  <div class="container">
+    <h2>What this diagnostic verifies</h2>
+
+    <p>
+      This diagnostic answers one question only:
+    </p>
+
+    <div class="boxed">
+      Does the signal you use to scale paid acquisition
+      still causally correlate with revenue?
+    </div>
+
+    <h3>We analyze</h3>
+    <ul>
+      <li>Paid spend → trial → activation → deal linkage</li>
+      <li>Which metrics trigger scaling decisions</li>
+      <li>Rule-based violations across funnel stages</li>
+    </ul>
+
+    <h3>We explicitly do not</h3>
+    <ul>
+      <li>Optimize campaigns</li>
+      <li>Recommend channels</li>
+      <li>Sell marketing services</li>
+    </ul>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="section">
+  <div class="container">
+    <h2>How it works</h2>
+
+    <h3>1 — Connect data (read-only)</h3>
+    <p>
+      Google Ads, LinkedIn Ads, CRM, product events.
+      We never modify anything.
+    </p>
+
+    <h3>2 — Apply deterministic rules</h3>
+    <p>
+      No machine learning.<br/>
+      No assumptions.<br/>
+      Only predefined economic rules.
+    </p>
+
+    <h3>3 — Get a verdict</h3>
+    <p>
+      Not a dashboard.<br/>
+      A clear economic verdict with money attached.
+    </p>
+  </div>
+</div>
+
+<!-- PAID -->
+<div class="section">
+  <div class="container">
+    <h2>Full Economic Diagnostic</h2>
+
+    <div class="price">$1,200 — one-time</div>
+    <div class="price-note">
+      Pricing reflects screening-level economic review.
+      Formal capital allocation assessments are priced separately.
+    </div>
+
+    <div style="margin-top:32px">
+      <a class="btn-primary" href="/signals/intake/intake.html">
+        Request Independent Review
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<footer>
+  <h2>Stop scaling on assumptions.</h2>
+  <p>Verify whether your growth signal is still economically valid.</p>
+
+  <div style="margin-top:24px">
+    <a class="btn-primary" href="/signals/intake/intake.html">
+      Run Free Diagnostic
+    </a>
+  </div>
+</footer>
 
 </body>
 </html>
