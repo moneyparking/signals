@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Economic Signal Revalidation — Confidential</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <style>
+    body {
+      margin: 0;
+      background: #f3f4f6;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif;
+      color: #0f172a;
+      line-height: 1.5;
+    }
+
+    /* ===== COVER ===== */
+
+    .cover {
+      height: 100vh;
+      padding: 120px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #ffffff;
+    }
+
+    .cover-eyebrow {
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #0f3d2e;
+    }
+
+    .cover-title {
+      font-size: 34px;
+      margin: 32px 0 12px;
+    }
+
+    .cover-subtitle {
+      font-size: 15px;
+      color: #374151;
+    }
+
+    .cover-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      font-size: 14px;
+      margin-top: 64px;
+    }
+
+    .cover-footer {
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .page-break {
+      page-break-after: always;
+    }
+
+    /* ===== CONTENT ===== */
+
+    .page {
+      max-width: 920px;
+      margin: 48px auto;
+      background: #ffffff;
+      padding: 64px 88px;
+      box-shadow: 0 12px 48px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 42px;
+      margin-bottom: 12px;
+      color: #0f3d2e;
+    }
+
+    h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #e5e7eb;
+      margin: 36px 0;
+    }
+
+    .mono {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 16px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 13px;
+      border-radius: 6px;
+      margin: 14px 0;
+      white-space: pre-wrap;
+    }
+
+    .box {
+      background: #f3f7f4;
+      border-left: 4px solid #0f3d2e;
+      padding: 18px 22px;
+      margin: 24px 0;
+      font-size: 14px;
+    }
+
+    .footer {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 48px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===== COVER ===== -->
+
+<div class="cover">
+  <div class="cover-eyebrow">
+    Independent Economic Assessment
+  </div>
+
+  <div>
+    <h1 class="cover-title">Economic Signal Revalidation Memo</h1>
+    <div class="cover-subtitle">
+      Confidential · Conditional decision analysis
+    </div>
+  </div>
+
+  <div class="cover-meta">
+    <div>
+      <strong>Context:</strong><br/>
+      Post-verdict revalidation
+    </div>
+    <div>
+      <strong>Focus:</strong><br/>
+      Boundary conditions & constraints
+    </div>
+    <div>
+      <strong>Date:</strong><br/>
+      {{DD Month YYYY}}
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    This document defines conditions under which a previously invalid
+    scaling signal may become decision-safe.  
+    No optimization or execution guidance is provided.
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ===== CONTENT ===== -->
+
+<div class="page">
+
+  <h1>Economic Signal Revalidation</h1>
+  <p class="footer">
+    This memo builds on a prior independent verdict indicating
+    insufficient signal validity for scaling decisions.
+  </p>
+
+  <div class="divider"></div>
+
+  <!-- 1. CONTEXT RECAP -->
+  <h2>1. Context Recap</h2>
+
+  <p>
+    A prior economic signal audit concluded that the primary scaling signal
+    did not maintain sufficient causal correlation with realized revenue.
+  </p>
+
+  <p>
+    This memo does not reassess that verdict.  
+    It evaluates the conditions under which revalidation may become possible.
+  </p>
+
+  <!-- 2. CONSTRAINT IDENTIFICATION -->
+  <h2>2. Constraint Identification</h2>
+
+  <ul>
+    <li>Attribution lag exceeding reliable decision windows</li>
+    <li>High variance in activation-to-revenue conversion</li>
+    <li>Sales cycle inconsistency across cohorts</li>
+  </ul>
+
+  <p>
+    These constraints limit the applicability of the current scaling signal
+    as a deterministic decision input.
+  </p>
+
+  <!-- 3. BOUNDARY CONDITIONS -->
+  <h2>3. Boundary Conditions</h2>
+
+  <div class="box">
+    Scaling may be considered conditionally safe
+    <strong>if and only if</strong> the following conditions are met.
+  </div>
+
+  <div class="mono">
+Signal lag ≤ X days  
+Conversion variance ≤ Y%  
+Revenue attribution confidence ≥ Z
+  </div>
+
+  <p>
+    These thresholds define a decision-safe envelope,
+    not performance targets.
+  </p>
+
+  <!-- 4. SCENARIO ENVELOPE -->
+  <h2>4. Scenario Envelope</h2>
+
+  <h3>Scenario A — Conservative</h3>
+  <p>Scaling permissible only within narrow spend bounds.</p>
+
+  <h3>Scenario B — Neutral</h3>
+  <p>Scaling conditionally permissible with monitored exposure.</p>
+
+  <h3>Scenario C — Aggressive</h3>
+  <p>Scaling not recommended due to elevated residual risk.</p>
+
+  <!-- 5. RESIDUAL RISK -->
+  <h2>5. Residual Risk Statement</h2>
+
+  <p>
+    Even if boundary conditions are met, residual uncertainty remains
+    due to factors outside the scope of this assessment.
+  </p>
+
+  <p>
+    This memo defines decision boundaries,
+    not outcome guarantees.
+  </p>
+
+  <div class="divider"></div>
+
+  <div class="footer">
+    This document is intended for internal decision-making only.
+    It does not replace independent judgement or fiduciary responsibility.
+  </div>
+
+</div>
+
+</body>
+</html>
