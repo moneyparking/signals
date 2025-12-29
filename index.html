@@ -3,177 +3,174 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Eligibility Screening — Independent Signal Review</title>
+  <title>Independent Economic Signal Review</title>
 
   <style>
+    :root {
+      --text-primary:#0f172a;
+      --text-secondary:#5f6b63;
+      --border-muted:#d6e2da;
+      --accent:#0f3d2e;
+      --cta:#1f2937;
+      --bg-soft:#f3f7f4;
+    }
+
     body {
       margin:0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+      color:var(--text-primary);
       background:#ffffff;
-      color:#0f172a;
-      line-height:1.5;
+      line-height:1.55;
+    }
+
+    header {
+      border-bottom:1px solid var(--border-muted);
+      padding:24px 0;
+    }
+
+    .nav {
+      max-width:960px;
+      margin:0 auto;
+      padding:0 24px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:14px;
+    }
+
+    .brand {
+      font-weight:600;
+      letter-spacing:0.02em;
+    }
+
+    .nav a {
+      color:var(--text-secondary);
+      text-decoration:none;
+      margin-left:20px;
     }
 
     .container {
-      max-width:640px;
-      margin:80px auto;
-      padding:0 24px;
+      max-width:720px;
+      margin:0 auto;
+      padding:96px 24px;
     }
 
-    h1 {
-      font-size:34px;
-      margin-bottom:12px;
-    }
+    h1 { font-size:48px; line-height:1.15; margin-bottom:24px; }
+    h2 { font-size:28px; margin-bottom:16px; }
+    h3 { font-size:18px; margin-bottom:8px; color:var(--accent); }
 
     p {
-      font-size:16px;
-      color:#5f6b63;
-      margin-bottom:20px;
+      font-size:17px;
+      margin-bottom:16px;
+      color:var(--text-secondary);
     }
 
-    .notice {
-      background:#f3f7f4;
-      border-left:4px solid #0f3d2e;
-      padding:16px;
+    .hero-note {
       font-size:14px;
+      color:var(--text-secondary);
       margin-bottom:32px;
     }
 
-    label {
-      display:block;
-      font-size:14px;
-      margin-bottom:6px;
-      margin-top:20px;
-    }
-
-    input, select {
-      width:100%;
-      padding:10px;
-      font-size:15px;
-      border:1px solid #d6e2da;
-      border-radius:4px;
-    }
-
-    button {
-      margin-top:32px;
-      padding:14px 24px;
-      font-size:16px;
-      background:#1f2937;
+    .btn-primary {
+      display:inline-block;
+      background:var(--cta);
       color:#ffffff;
-      border:none;
+      padding:14px 24px;
       border-radius:6px;
-      cursor:pointer;
+      text-decoration:none;
+      font-size:16px;
     }
 
-    button:hover {
-      opacity:0.9;
+    .link-secondary {
+      display:block;
+      margin-top:14px;
+      font-size:14px;
+      color:var(--accent);
+      text-decoration:none;
     }
 
-    .footnote {
-      font-size:13px;
-      color:#6b7280;
-      margin-top:24px;
+    .section {
+      padding:96px 0;
+      border-top:1px solid var(--border-muted);
+    }
+
+    .boxed {
+      background:var(--bg-soft);
+      padding:32px;
+      border-left:4px solid var(--accent);
+      margin:32px 0;
+      font-size:16px;
+      color:var(--text-primary);
+    }
+
+    ul { padding-left:18px; color:var(--text-secondary); }
+    li { margin-bottom:8px; }
+
+    .price { font-size:22px; font-weight:600; margin-bottom:8px; }
+    .price-note { font-size:14px; color:var(--text-secondary); }
+
+    footer {
+      border-top:1px solid var(--border-muted);
+      padding:96px 24px;
+      text-align:center;
     }
   </style>
 </head>
 
 <body>
 
+<header>
+  <div class="nav">
+    <div class="brand">Independent Signal Review</div>
+    <div>
+      <a href="/signals/sample-audit/audit.html">Sample audit</a>
+      <a href="/signals/intake/intake.html">Request eligibility review</a>
+    </div>
+  </div>
+</header>
+
 <div class="container">
+  <h1>Your growth metrics may be lying to you.</h1>
 
-  <h1>Eligibility screening</h1>
-
-  <p>
-    This is not an application.
+  <p class="hero-note">
+    Independent economic screening · No optimization · No advisory · 48–72h
   </p>
 
-  <div class="notice">
-    This screening determines whether an independent economic review
-    can be conducted.<br/>
-    No follow-up, consultation, or discussion is included.
+  <p>
+    We detect when paid acquisition is scaled on signals
+    that no longer causally correlate with revenue —
+    and quantify the resulting economic loss.
+  </p>
+
+  <div style="margin-top:32px">
+    <a class="btn-primary" href="/signals/intake/intake.html">
+      Request Independent Review
+    </a>
+    <a class="link-secondary" href="/signals/sample-audit/audit.html">
+      View sample economic audit →
+    </a>
   </div>
-
-  <form id="intakeForm">
-
-    <!-- Company website -->
-    <label for="website">Company website</label>
-    <input type="url" id="website" required placeholder="https://example.com" />
-
-    <!-- Paid spend -->
-    <label for="spend">Monthly paid acquisition spend</label>
-    <select id="spend" required>
-      <option value="">Select</option>
-      <option value="lt30">&lt; $30k</option>
-      <option value="30to100">$30k–$100k</option>
-      <option value="gt100">&gt; $100k</option>
-    </select>
-
-    <!-- Primary metric -->
-    <label for="metric">Primary scaling metric</label>
-    <select id="metric" required>
-      <option value="">Select</option>
-      <option value="cpl">CPL / CAC</option>
-      <option value="mql">MQL</option>
-      <option value="trials">Trials / signups</option>
-      <option value="other">Other</option>
-    </select>
-
-    <!-- Sales involvement -->
-    <label for="sales">Sales involvement</label>
-    <select id="sales" required>
-      <option value="">Select</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
-    </select>
-
-    <!-- Company stage -->
-    <label for="stage">Company stage</label>
-    <select id="stage" required>
-      <option value="">Select</option>
-      <option value="early">Early</option>
-      <option value="growth">Growth</option>
-      <option value="scale">Scale</option>
-    </select>
-
-    <!-- Business email -->
-    <label for="email">Business email</label>
-    <input type="email" id="email" required placeholder="name@company.com" />
-
-    <button type="submit">Submit for eligibility review</button>
-
-  </form>
-
-  <div class="footnote">
-    Submitting this form does not guarantee acceptance.
-    The process may end at this stage.
-  </div>
-
 </div>
 
-<script>
-  document.getElementById("intakeForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+<div class="section">
+  <div class="container">
+    <h2>Why this matters</h2>
+    <div class="boxed">
+      CPL looks fine.<br/>
+      Trials increase.<br/>
+      Revenue stays flat.
+    </div>
+    <p>This is not a marketing problem. It is a signal integrity problem.</p>
+  </div>
+</div>
 
-    const spend = document.getElementById("spend").value;
-    const metric = document.getElementById("metric").value;
-    const sales = document.getElementById("sales").value;
-    const stage = document.getElementById("stage").value;
-
-    let refuse = false;
-
-    // Auto-refusal rules
-    if (spend === "lt30") refuse = true;
-    if (metric === "other") refuse = true;
-    if (sales === "no") refuse = true;
-    if (stage === "early") refuse = true;
-
-    if (refuse) {
-      window.location.href = "/signals/refusal/refusal.html";
-    } else {
-      window.location.href = "/signals/confirmation/confirmation.html";
-    }
-  });
-</script>
+<footer>
+  <h2>Stop scaling on assumptions.</h2>
+  <p>Verify whether your growth signal is still economically valid.</p>
+  <a class="btn-primary" href="/signals/intake/intake.html">
+    Request Independent Review
+  </a>
+</footer>
 
 </body>
 </html>
