@@ -70,7 +70,7 @@
     .btn-header {
       padding: 8px 14px;
       background: var(--cta-bg);
-      color: white !important;
+      color: var(--cta-text) !important;
       border-radius: 6px;
       cursor: pointer;
     }
@@ -131,43 +131,21 @@
       display: inline-block;
     }
 
-    .institutional-strip {
+    .audit-link {
       font-size: 14px;
-      padding: 16px 20px;
-      border-left: 4px solid var(--audit-green);
-      background: var(--bg-muted);
       color: var(--text-secondary);
+      text-decoration: none;
     }
 
-    section { margin-top: 120px; }
-
-    h2 {
-      font-size: 30px;
-      color: var(--audit-green);
-      margin-bottom: 24px;
+    .audit-link:hover {
+      text-decoration: underline;
     }
 
-    .method-artifact {
-      margin-top: 120px;
-      padding: 48px;
-      border: 1px solid var(--border-muted);
-      border-radius: 12px;
-      background: #fbfdfc;
+    .hero-note {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 12px;
     }
-
-    .rule-block {
-      background: #0f172a;
-      color: #e5e7eb;
-      padding: 24px;
-      border-radius: 8px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      font-size: 14px;
-      line-height: 1.6;
-      margin: 24px 0;
-    }
-
-    ul { padding-left: 18px; }
-    li { margin-bottom: 8px; }
 
     footer {
       padding: 120px 24px;
@@ -209,58 +187,21 @@
 
   <div class="cta-group">
     <a class="btn-primary">Request Independent Review</a>
+    <div style="margin-top:12px;">
+      <a href="/sample-audit/audit.html" class="audit-link">
+        View sample economic audit →
+      </a>
+    </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="institutional-strip">
-    Deterministic economic review · Rule-based · Opinion-free
+  <div class="hero-note">
+    Independent screening · Sample audit available · 48–72h
   </div>
-
-  <section class="method-artifact">
-    <h2>Signal Integrity Framework (excerpt)</h2>
-    <pre class="rule-block">
-Rule S-04
-IF scaling trigger = CPL
-AND revenue lag > 2 sales cycles
-THEN signal validity = broken
-
-Loss calculated from marginal CAC delta
-    </pre>
-    <p class="secondary">
-      This is one of the predefined deterministic rules used in the review.
-      Full rule set is not public.
-    </p>
-  </section>
-
-  <section id="scope">
-    <h2>Scope of review (what is evaluated)</h2>
-    <ul>
-      <li>Spend → trial → activation → deal linkage</li>
-      <li>Scaling trigger signals</li>
-      <li>Deterministic rule violations</li>
-    </ul>
-  </section>
-
-  <section id="process">
-    <h2>Review process (how it is conducted)</h2>
-    <ul>
-      <li>Read-only data connection</li>
-      <li>Deterministic rule evaluation</li>
-      <li>Economic verdict with quantified loss</li>
-    </ul>
-  </section>
-
-  <section id="assessment">
-    <h2>Full economic assessment</h2>
-    <p>$1,200 — one-time · Board-ready PDF</p>
-    <a class="btn-primary">Request Independent Review</a>
-  </section>
 </div>
 
 <footer>
   <h2>Stop scaling on assumptions.</h2>
-  <p class="secondary">Verify whether your growth signal is economically valid.</p>
+  <p class="hero-lead">Verify whether your growth signal is economically valid.</p>
   <a class="btn-primary">Request Independent Review</a>
 </footer>
 
