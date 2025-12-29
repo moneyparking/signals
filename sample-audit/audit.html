@@ -24,24 +24,41 @@
 
     h1 {
       font-size: 32px;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     h2 {
       font-size: 22px;
       margin-top: 48px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       color: #0f3d2e;
+    }
+
+    h3 {
+      font-size: 15px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #374151;
     }
 
     p {
       margin-bottom: 12px;
     }
 
+    ul {
+      margin-top: 8px;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
     .meta {
       font-size: 13px;
       color: #5f6b63;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
 
     .divider {
@@ -72,9 +89,13 @@
     .verdict {
       background: #0f172a;
       color: #ffffff;
-      padding: 24px;
+      padding: 28px;
       border-radius: 8px;
       margin-top: 32px;
+    }
+
+    .verdict strong {
+      font-size: 18px;
     }
 
     .footer {
@@ -99,13 +120,13 @@
   <h2>1. Audit Scope</h2>
   <p>
     This document illustrates an example of an independent economic audit
-    focused on signal integrity within a paid acquisition system.
+    focused on validating signal integrity within a paid acquisition system.
   </p>
 
   <div class="box">
-    This sample demonstrates output format and reasoning structure only.
-    Full diagnostic requires an independent review with complete rule coverage
-    and data validation.
+    This sample demonstrates output format and decision logic only.
+    Full diagnostic requires an independent review with complete rule coverage,
+    verified data linkage, and confidence scoring.
   </div>
 
   <h2>2. Signal Under Review</h2>
@@ -113,6 +134,11 @@
   <ul>
     <li>Cost Per Lead (CPL)</li>
   </ul>
+
+  <p>
+    The organization continued scaling paid acquisition based on CPL stability,
+    despite delayed and weakening revenue response downstream.
+  </p>
 
   <h2>3. Rule Evaluation (excerpt)</h2>
 
@@ -124,31 +150,60 @@ AND revenue lag > 2 sales cycles
 THEN signal validity = broken
   </div>
 
+  <p>
+    This rule tests whether a proxy metric used for scaling decisions
+    remains causally correlated with realized revenue outcomes.
+  </p>
+
   <h2>4. Economic Impact Calculation</h2>
 
+  <h3>Loss source</h3>
+  <p>
+    Loss is attributed to continued spend beyond the point
+    where CPL ceased to reflect marginal revenue efficiency.
+  </p>
+
   <div class="mono">
-Marginal CAC (scaled):     $1,420
-Marginal CAC (baseline):  $980
+Baseline marginal CAC:    $980
+Scaled marginal CAC:      $1,420
 
-Delta per deal:           $440
-Annualized volume:        310 deals
+Marginal inefficiency:    $440 per deal
+Annualized deal volume:  310
 
-Estimated loss range:
+Estimated annual loss:
 $110,000 – $160,000
   </div>
 
-  <h2>5. Verdict</h2>
+  <p>
+    Loss range reflects sensitivity to attribution lag and
+    deal conversion variance across observed periods.
+  </p>
+
+  <h2>5. Economic Verdict</h2>
 
   <div class="verdict">
-    Signal integrity: <strong>FAILED</strong><br/>
-    Scaling decision based on CPL is no longer economically valid.
+    <strong>Verdict: SIGNAL INVALID</strong><br/><br/>
+    Scaling decisions based on CPL are no longer
+    economically justified under current system conditions.
+    <br/><br/>
+    Continued scaling without signal correction
+    is expected to generate incremental economic loss.
   </div>
+
+  <h2>6. Confidence & Limitations</h2>
+
+  <ul>
+    <li>Confidence level: <strong>Moderate–High</strong></li>
+    <li>Assessment limited to observed paid acquisition channels</li>
+    <li>No counterfactual optimization scenarios included</li>
+    <li>Remediation paths intentionally excluded from this audit</li>
+  </ul>
 
   <div class="divider"></div>
 
   <div class="footer">
-    This document is provided as a public sample of an audit artifact and
-    does not constitute financial or operational advice.
+    This document is provided as a public sample of an audit artifact.
+    It does not constitute financial, marketing, or operational advice.
   </div>
 
 </div>
