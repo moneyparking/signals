@@ -2,171 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Independent Review Intake</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eligibility Screening</title>
 
   <style>
     body {
-      margin: 0;
-      background: #f6f7f8;
-      font-family: -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif;
-      color: #0f172a;
-      line-height: 1.55;
+      margin:0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+      background:#ffffff;
+      color:#0f172a;
+      line-height:1.5;
     }
 
-    .page {
-      max-width: 720px;
-      margin: 64px auto;
-      background: #ffffff;
-      padding: 64px 72px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    .container {
+      max-width:640px;
+      margin:80px auto;
+      padding:0 24px;
     }
 
-    h1 {
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
+    h1 { font-size:34px; margin-bottom:12px; }
+    p { font-size:16px; color:#5f6b63; margin-bottom:20px; }
 
-    .meta {
-      font-size: 13px;
-      color: #6b7280;
-      margin-bottom: 32px;
+    .notice {
+      background:#f3f7f4;
+      border-left:4px solid #0f3d2e;
+      padding:16px;
+      font-size:14px;
+      margin-bottom:32px;
     }
 
     label {
-      display: block;
-      margin-bottom: 18px;
-      font-size: 14px;
+      display:block;
+      font-size:14px;
+      margin-bottom:6px;
+      margin-top:20px;
     }
 
     input, select {
-      width: 100%;
-      margin-top: 6px;
-      padding: 10px;
-      font-size: 14px;
-      border-radius: 6px;
-      border: 1px solid #d1d5db;
+      width:100%;
+      padding:10px;
+      font-size:15px;
+      border:1px solid #d6e2da;
+      border-radius:4px;
     }
 
-    .divider {
-      height: 1px;
-      background: #e5e7eb;
-      margin: 40px 0;
+    button {
+      margin-top:32px;
+      padding:14px 24px;
+      font-size:16px;
+      background:#1f2937;
+      color:#ffffff;
+      border:none;
+      border-radius:6px;
+      cursor:pointer;
     }
 
-    .price-box {
-      background: #0f172a;
-      color: #ffffff;
-      padding: 24px;
-      border-radius: 8px;
-      margin-top: 32px;
-    }
-
-    .submit {
-      margin-top: 32px;
-      background: #1f2937;
-      color: #ffffff;
-      padding: 14px 22px;
-      border-radius: 6px;
-      border: none;
-      font-size: 15px;
-      cursor: pointer;
-    }
-
-    .footer {
-      font-size: 12px;
-      color: #6b7280;
-      margin-top: 40px;
+    .footnote {
+      font-size:13px;
+      color:#6b7280;
+      margin-top:24px;
     }
   </style>
 </head>
 
 <body>
 
-<div class="page">
+<div class="container">
 
-  <h1>Independent Review Intake</h1>
-  <div class="meta">
-    Screening intake · Deterministic scope assessment
+  <h1>Eligibility screening</h1>
+  <p>This is not an application.</p>
+
+  <div class="notice">
+    This screening determines whether an independent economic review
+    can be conducted. No follow-up or discussion is included.
   </div>
 
-  <label>
-    Work email
-    <input type="email" required />
-  </label>
+  <form id="intakeForm">
 
-  <label>
-    Company stage
-    <select id="stage">
-      <option value="early">Early / Seed</option>
+    <label>Company website</label>
+    <input type="url" value="https://" required />
+
+    <label>Monthly paid acquisition spend</label>
+    <select id="spend" required>
+      <option value="">Select</option>
+      <option value="lt30">&lt; $30k</option>
+      <option value="30to100">$30k–$100k</option>
+      <option value="gt100">&gt; $100k</option>
+    </select>
+
+    <label>Primary scaling metric</label>
+    <select id="metric" required>
+      <option value="">Select</option>
+      <option value="cpl">CPL / CAC</option>
+      <option value="mql">MQL</option>
+      <option value="trials">Trials / signups</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label>Sales involvement</label>
+    <select id="sales" required>
+      <option value="">Select</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <label>Company stage</label>
+    <select id="stage" required>
+      <option value="">Select</option>
+      <option value="early">Early</option>
       <option value="growth">Growth</option>
       <option value="scale">Scale</option>
     </select>
-  </label>
 
-  <label>
-    Monthly paid acquisition spend
-    <select id="spend">
-      <option value="low">&lt; $30k</option>
-      <option value="mid">$30k–100k</option>
-      <option value="high">$100k+</option>
-    </select>
-  </label>
+    <label>Business email</label>
+    <input type="email" required />
 
-  <label>
-    Primary scaling signal
-    <select id="signal">
-      <option value="cpl">CPL</option>
-      <option value="mql">MQL</option>
-      <option value="trial">Trials</option>
-      <option value="other">Other</option>
-    </select>
-  </label>
+    <button type="submit">Submit for eligibility review</button>
 
-  <label>
-    Sales involvement
-    <select id="sales">
-      <option value="none">No sales team</option>
-      <option value="assist">Sales-assisted</option>
-      <option value="complex">Multi-stage sales</option>
-    </select>
-  </label>
+  </form>
 
-  <div class="price-box" id="price">
-    <strong>$1,200</strong><br/>
-    Independent economic screening review
-  </div>
-
-  <button class="submit" onclick="handleSubmit()">
-    Submit review request
-  </button>
-
-  <div class="footer">
-    Submission does not guarantee acceptance.
+  <div class="footnote">
+    The process may end at this stage.
   </div>
 
 </div>
 
 <script>
-  function handleSubmit() {
-    const stage = document.getElementById('stage').value;
-    const spend = document.getElementById('spend').value;
-    const signal = document.getElementById('signal').value;
-    const sales = document.getElementById('sales').value;
+  document.getElementById("intakeForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-    // AUTO-REFUSAL CONDITIONS
-    if (
-      spend === 'low' ||
-      signal === 'other' ||
-      (stage === 'early' && sales === 'none')
-    ) {
-      window.location.href = '/refusal/refusal.html';
-      return;
+    const spend = document.getElementById("spend").value;
+    const metric = document.getElementById("metric").value;
+    const sales = document.getElementById("sales").value;
+    const stage = document.getElementById("stage").value;
+
+    let refuse = false;
+
+    if (spend === "lt30") refuse = true;
+    if (metric === "other") refuse = true;
+    if (sales === "no") refuse = true;
+    if (stage === "early") refuse = true;
+
+    if (refuse) {
+      window.location.href = "/signals/refusal/refusal.html";
+    } else {
+      window.location.href = "/signals/confirmation/confirmation.html";
     }
-
-    // ACCEPTED
-    window.location.href = '/confirmation/confirmation.html';
-  }
+  });
 </script>
 
 </body>
