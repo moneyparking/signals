@@ -1,0 +1,17 @@
+W-8BEN-E Handling Guide
+
+The W-8BEN-E form is provided only upon request
+from the Client’s finance or legal department.
+
+The form is completed using official IRS PDF
+and signed electronically or manually.
+
+Key points:
+- Entity classification: Individual / Sole proprietor (FOP)
+- Country of incorporation: Ukraine
+- FATCA status: Active NFFE
+- No permanent establishment in the United States
+- No U.S. withholding required for services rendered outside the U.S.
+
+The completed form is sent directly to the Client
+and not stored or shared further.
