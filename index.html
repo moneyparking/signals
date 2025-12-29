@@ -25,11 +25,11 @@
 
     header {
       border-bottom:1px solid var(--border-muted);
-      padding:24px 0;
+      padding:28px 0;
     }
 
     .nav {
-      max-width:960px;
+      max-width:1040px;
       margin:0 auto;
       padding:0 24px;
       display:flex;
@@ -40,24 +40,38 @@
 
     .brand {
       font-weight:600;
-      letter-spacing:0.02em;
+      letter-spacing:0.04em;
     }
 
     .nav a {
       color:var(--text-secondary);
       text-decoration:none;
-      margin-left:20px;
+      margin-left:24px;
     }
 
     .container {
-      max-width:720px;
+      max-width:760px;
       margin:0 auto;
       padding:96px 24px;
     }
 
-    h1 { font-size:48px; line-height:1.15; margin-bottom:24px; }
-    h2 { font-size:28px; margin-bottom:16px; }
-    h3 { font-size:18px; margin-bottom:8px; color:var(--accent); }
+    h1 {
+      font-size:52px;
+      line-height:1.1;
+      margin-bottom:28px;
+    }
+
+    h2 {
+      font-size:30px;
+      margin-bottom:18px;
+    }
+
+    h3 {
+      font-size:18px;
+      margin-bottom:8px;
+      color:var(--accent);
+      letter-spacing:0.02em;
+    }
 
     p {
       font-size:17px;
@@ -68,14 +82,14 @@
     .hero-note {
       font-size:14px;
       color:var(--text-secondary);
-      margin-bottom:32px;
+      margin-bottom:36px;
     }
 
     .btn-primary {
       display:inline-block;
       background:var(--cta);
       color:#ffffff;
-      padding:14px 24px;
+      padding:16px 28px;
       border-radius:6px;
       text-decoration:none;
       font-size:16px;
@@ -83,7 +97,7 @@
 
     .link-secondary {
       display:block;
-      margin-top:14px;
+      margin-top:16px;
       font-size:14px;
       color:var(--accent);
       text-decoration:none;
@@ -96,18 +110,32 @@
 
     .boxed {
       background:var(--bg-soft);
-      padding:32px;
+      padding:36px;
       border-left:4px solid var(--accent);
-      margin:32px 0;
+      margin:36px 0;
       font-size:16px;
       color:var(--text-primary);
     }
 
-    ul { padding-left:18px; color:var(--text-secondary); }
-    li { margin-bottom:8px; }
+    ul {
+      padding-left:18px;
+      color:var(--text-secondary);
+    }
 
-    .price { font-size:22px; font-weight:600; margin-bottom:8px; }
-    .price-note { font-size:14px; color:var(--text-secondary); }
+    li {
+      margin-bottom:8px;
+    }
+
+    .price {
+      font-size:24px;
+      font-weight:600;
+      margin-bottom:8px;
+    }
+
+    .price-note {
+      font-size:14px;
+      color:var(--text-secondary);
+    }
 
     footer {
       border-top:1px solid var(--border-muted);
@@ -121,7 +149,7 @@
 
 <header>
   <div class="nav">
-    <div class="brand">Independent Signal Review</div>
+    <div class="brand">INDEPENDENT SIGNAL REVIEW</div>
     <div>
       <a href="/signals/sample-audit/audit.html">Sample audit</a>
       <a href="/signals/intake/intake.html">Request eligibility review</a>
@@ -129,6 +157,7 @@
   </div>
 </header>
 
+<!-- HERO -->
 <div class="container">
   <h1>Your growth metrics may be lying to you.</h1>
 
@@ -139,10 +168,10 @@
   <p>
     We detect when paid acquisition is scaled on signals
     that no longer causally correlate with revenue —
-    and quantify the resulting economic loss.
+    and calculate the economic loss.
   </p>
 
-  <div style="margin-top:32px">
+  <div style="margin-top:36px">
     <a class="btn-primary" href="/signals/intake/intake.html">
       Request Independent Review
     </a>
@@ -152,21 +181,119 @@
   </div>
 </div>
 
+<!-- WHY -->
 <div class="section">
   <div class="container">
     <h2>Why this matters</h2>
+
+    <p>
+      Most SaaS teams do not lose money because of channels.
+    </p>
+
+    <p>
+      They lose money because scaling decisions rely on
+      signals that worked at a smaller scale —
+      but no longer do.
+    </p>
+
     <div class="boxed">
-      CPL looks fine.<br/>
+      CPL looks stable.<br/>
       Trials increase.<br/>
       Revenue stays flat.
     </div>
-    <p>This is not a marketing problem. It is a signal integrity problem.</p>
+
+    <p>
+      This is not a marketing problem.<br/>
+      It is a signal integrity problem.
+    </p>
+  </div>
+</div>
+
+<!-- WHAT WE CHECK -->
+<div class="section">
+  <div class="container">
+    <h2>What this diagnostic verifies</h2>
+
+    <div class="boxed">
+      Does the signal you use to scale paid acquisition
+      still causally correlate with revenue?
+    </div>
+
+    <h3>We analyze</h3>
+    <ul>
+      <li>Paid spend → trial → activation → deal linkage</li>
+      <li>Which metrics trigger scaling decisions</li>
+      <li>Rule-based violations across funnel stages</li>
+    </ul>
+
+    <h3>We explicitly do not</h3>
+    <ul>
+      <li>Optimize campaigns</li>
+      <li>Recommend channels</li>
+      <li>Sell marketing services</li>
+    </ul>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="section">
+  <div class="container">
+    <h2>How it works</h2>
+
+    <h3>1 — Connect data (read-only)</h3>
+    <p>Google Ads, LinkedIn Ads, CRM, product events. We never modify anything.</p>
+
+    <h3>2 — Apply deterministic rules</h3>
+    <p>No machine learning. No assumptions. Only predefined economic rules.</p>
+
+    <h3>3 — Get a verdict</h3>
+    <p>
+      Not a dashboard.<br/>
+      A clear economic verdict with money attached.
+    </p>
+  </div>
+</div>
+
+<!-- WHAT YOU RECEIVE -->
+<div class="section">
+  <div class="container">
+    <h2>What you receive (free)</h2>
+
+    <ul>
+      <li>Confirmation whether a scaling defect exists</li>
+      <li>Affected domain (marketing, product, sales)</li>
+      <li>Estimated annual loss range</li>
+      <li>Confidence level</li>
+    </ul>
+
+    <div class="boxed">
+      This report does not include remediation steps.
+    </div>
+  </div>
+</div>
+
+<!-- PAID -->
+<div class="section">
+  <div class="container">
+    <h2>Full Economic Diagnostic</h2>
+
+    <div class="price">$1,200 — one-time</div>
+    <div class="price-note">
+      No subscription · Board-ready PDF · Deterministic methodology
+    </div>
+
+    <div style="margin-top:32px">
+      <a class="btn-primary" href="/signals/intake/intake.html">
+        Request Independent Review
+      </a>
+    </div>
   </div>
 </div>
 
 <footer>
   <h2>Stop scaling on assumptions.</h2>
   <p>Verify whether your growth signal is still economically valid.</p>
+
   <a class="btn-primary" href="/signals/intake/intake.html">
     Request Independent Review
   </a>
