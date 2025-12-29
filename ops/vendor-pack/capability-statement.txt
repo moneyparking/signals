@@ -1,0 +1,46 @@
+Capability Statement
+
+Service Overview
+We provide independent economic assessments
+focused on validating the integrity of paid acquisition
+scaling signals in B2B environments.
+
+Our work determines whether the metrics used to scale
+marketing spend maintain causal correlation with
+realized revenue at current scale.
+
+What We Do
+- Evaluate paid acquisition signal validity
+- Identify causal breaks across funnel stages
+- Quantify economic risk of continued scaling
+- Deliver formal, evidence-based economic verdicts
+
+What We Do Not Do
+- Campaign optimization
+- Channel recommendations
+- Growth strategy
+- Advisory or consulting services
+- Implementation or execution
+
+Methodology
+- Deterministic rule-based analysis
+- Predefined economic thresholds
+- No machine learning
+- No opinion-based conclusions
+
+Deliverables
+- One-time written report (PDF)
+- Formal economic verdict
+- Confidence level and loss estimation
+- No follow-up or revisions
+
+Engagement Characteristics
+- Fixed scope
+- Fixed fee
+- No calls required
+- No ongoing relationship implied
+
+Use Cases
+- Pre-scale validation
+- Board-level decision support
+- Capital allocation risk assessment
