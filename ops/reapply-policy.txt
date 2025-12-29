@@ -1,0 +1,16 @@
+Re-apply Policy
+
+A previously declined request may be resubmitted
+only if material changes to the system have occurred.
+
+Material changes include, but are not limited to:
+- sustained increase in paid acquisition spend
+- formalized and repeatable revenue attribution
+- stabilized sales process
+- change in primary scaling signal
+
+Re-submission is not considered earlier than
+six months from the initial assessment.
+
+Requests that do not meet these conditions
+are declined without re-evaluation.
