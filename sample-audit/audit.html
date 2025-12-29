@@ -34,11 +34,6 @@
       color: #0f3d2e;
     }
 
-    h3 {
-      font-size: 16px;
-      margin-bottom: 8px;
-    }
-
     p {
       margin-bottom: 12px;
     }
@@ -108,22 +103,16 @@
   </p>
 
   <div class="box">
-    This sample is anonymized and does not represent a specific company.
-    Values and structures are provided for demonstration of method only.
+    This sample demonstrates output format and reasoning structure only.
+    Full diagnostic requires an independent review with complete rule coverage
+    and data validation.
   </div>
 
   <h2>2. Signal Under Review</h2>
-  <p>
-    Primary scaling trigger evaluated in this audit:
-  </p>
+  <p>Primary scaling trigger evaluated:</p>
   <ul>
     <li>Cost Per Lead (CPL)</li>
   </ul>
-
-  <p>
-    The organization scaled paid acquisition based on CPL stability
-    while downstream revenue showed delayed response.
-  </p>
 
   <h2>3. Rule Evaluation (excerpt)</h2>
 
@@ -134,11 +123,6 @@ IF scaling trigger = CPL
 AND revenue lag > 2 sales cycles
 THEN signal validity = broken
   </div>
-
-  <p>
-    This rule evaluates whether a proxy signal used for scaling
-    maintains causal correlation with realized revenue.
-  </p>
 
   <h2>4. Economic Impact Calculation</h2>
 
@@ -153,11 +137,6 @@ Estimated loss range:
 $110,000 – $160,000
   </div>
 
-  <p>
-    Loss is calculated from marginal CAC delta multiplied by
-    scaled deal volume beyond signal validity threshold.
-  </p>
-
   <h2>5. Verdict</h2>
 
   <div class="verdict">
@@ -165,17 +144,10 @@ $110,000 – $160,000
     Scaling decision based on CPL is no longer economically valid.
   </div>
 
-  <h2>6. Limitations</h2>
-  <ul>
-    <li>This sample does not include remediation steps</li>
-    <li>Values are illustrative and anonymized</li>
-    <li>Full rule set is not publicly disclosed</li>
-  </ul>
-
   <div class="divider"></div>
 
   <div class="footer">
-    This document is provided as a public sample of the audit format and
+    This document is provided as a public sample of an audit artifact and
     does not constitute financial or operational advice.
   </div>
 
@@ -183,4 +155,3 @@ $110,000 – $160,000
 
 </body>
 </html>
-
