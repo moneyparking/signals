@@ -39,8 +39,9 @@
     }
 
     .brand {
-      font-weight:600;
-      letter-spacing:0.04em;
+      font-weight:700;
+      letter-spacing:0.12em;
+      font-size:13px;
     }
 
     .nav a {
@@ -52,37 +53,45 @@
     .container {
       max-width:760px;
       margin:0 auto;
-      padding:96px 24px;
+      padding:72px 24px;
     }
 
     h1 {
-      font-size:52px;
-      line-height:1.1;
-      margin-bottom:28px;
+      font-size:54px;
+      line-height:1.08;
+      margin-bottom:24px;
+      letter-spacing:-0.02em;
     }
 
     h2 {
       font-size:30px;
-      margin-bottom:18px;
+      margin-bottom:14px;
     }
 
     h3 {
       font-size:18px;
-      margin-bottom:8px;
+      margin-bottom:6px;
       color:var(--accent);
       letter-spacing:0.02em;
     }
 
     p {
       font-size:17px;
-      margin-bottom:16px;
+      margin-bottom:14px;
       color:var(--text-secondary);
     }
 
     .hero-note {
       font-size:14px;
       color:var(--text-secondary);
-      margin-bottom:36px;
+      margin-bottom:32px;
+    }
+
+    .hero-divider {
+      width:48px;
+      height:3px;
+      background:var(--accent);
+      margin:36px 0 32px;
     }
 
     .btn-primary {
@@ -97,22 +106,28 @@
 
     .link-secondary {
       display:block;
-      margin-top:16px;
+      margin-top:14px;
       font-size:14px;
       color:var(--accent);
       text-decoration:none;
     }
 
     .section {
-      padding:96px 0;
+      padding:72px 0;
       border-top:1px solid var(--border-muted);
+    }
+
+    .transition {
+      font-size:15px;
+      color:var(--accent);
+      margin:24px 0 32px;
     }
 
     .boxed {
       background:var(--bg-soft);
-      padding:36px;
+      padding:32px;
       border-left:4px solid var(--accent);
-      margin:36px 0;
+      margin:28px 0;
       font-size:16px;
       color:var(--text-primary);
     }
@@ -120,16 +135,17 @@
     ul {
       padding-left:18px;
       color:var(--text-secondary);
+      margin-bottom:8px;
     }
 
     li {
-      margin-bottom:8px;
+      margin-bottom:6px;
     }
 
     .price {
       font-size:24px;
       font-weight:600;
-      margin-bottom:8px;
+      margin-bottom:6px;
     }
 
     .price-note {
@@ -139,7 +155,7 @@
 
     footer {
       border-top:1px solid var(--border-muted);
-      padding:96px 24px;
+      padding:72px 24px;
       text-align:center;
     }
   </style>
@@ -165,13 +181,15 @@
     Independent economic screening · No optimization · No advisory · 48–72h
   </p>
 
+  <div class="hero-divider"></div>
+
   <p>
     We detect when paid acquisition is scaled on signals
     that no longer causally correlate with revenue —
     and calculate the economic loss.
   </p>
 
-  <div style="margin-top:36px">
+  <div style="margin-top:32px">
     <a class="btn-primary" href="/intake/intake.html">
       Request Independent Review
     </a>
@@ -184,6 +202,10 @@
 <!-- WHY -->
 <div class="section">
   <div class="container">
+    <div class="transition">
+      Here’s why this problem appears at scale — and not earlier.
+    </div>
+
     <h2>Why this matters</h2>
 
     <p>
@@ -212,6 +234,10 @@
 <!-- WHAT WE CHECK -->
 <div class="section">
   <div class="container">
+    <div class="transition">
+      To verify this, we inspect the signal path — not the channels.
+    </div>
+
     <h2>What this diagnostic verifies</h2>
 
     <div class="boxed">
@@ -238,6 +264,10 @@
 <!-- HOW IT WORKS -->
 <div class="section">
   <div class="container">
+    <div class="transition">
+      This is executed as a deterministic review, not an exploratory analysis.
+    </div>
+
     <h2>How it works</h2>
 
     <h3>1 — Connect data (read-only)</h3>
@@ -257,25 +287,28 @@
 <!-- WHAT YOU RECEIVE (FREE) -->
 <div class="section">
   <div class="container">
+    <div class="transition">
+      Before any paid engagement, the procedure starts with eligibility.
+    </div>
+
     <h2>What you receive (free)</h2>
 
     <p>
-      Before any paid work, we perform a formal eligibility diagnostic.
+      A formal eligibility screening delivered as a concise written summary.
     </p>
 
     <ul>
-      <li>Confirmation whether an independent review is applicable</li>
       <li>Eligibility verdict: accepted or declined</li>
+      <li>Confirmation whether an independent review is applicable</li>
       <li>Clear boundary of what the paid audit would (and would not) cover</li>
     </ul>
 
     <div class="boxed">
-      This step does not include analysis, calculations, or recommendations.<br/>
-      It determines whether a paid economic review makes sense at all.
+      One-page diagnostic summary.<br/>
+      No analysis. No calculations. No recommendations.
     </div>
   </div>
 </div>
-
 
 <!-- PAID -->
 <div class="section">
@@ -287,7 +320,7 @@
       No subscription · Board-ready PDF · Deterministic methodology
     </div>
 
-    <div style="margin-top:32px">
+    <div style="margin-top:28px">
       <a class="btn-primary" href="/intake/intake.html">
         Request Independent Review
       </a>
@@ -306,5 +339,3 @@
 
 </body>
 </html>
-
-
