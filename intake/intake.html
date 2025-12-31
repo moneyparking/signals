@@ -77,47 +77,66 @@
     can be conducted. No follow-up or discussion is included.
   </div>
 
-  <form id="intakeForm">
+  <!--
+    IMPORTANT:
+    - Form submits directly to Cloudflare Worker
+    - Eligibility logic + email handling are server-side
+    - Frontend does NOT perform redirects or decisions
+  -->
+
+  <form
+    method="POST"
+    action="https://patient-cake-7154.moneyparking.workers.dev"
+  >
 
     <label>Company website</label>
-    <input type="url" value="https://" required />
+    <input
+      type="url"
+      name="website"
+      value="https://"
+      required
+    />
 
-    <label>Monthly paid acquisition spend</label>
-    <select id="spend" required>
-      <option value="">Select</option>
-      <option value="lt30">&lt; $30k</option>
-      <option value="30to100">$30k–$100k</option>
-      <option value="gt100">&gt; $100k</option>
-    </select>
+    <label>Monthly paid acquisition spend (USD)</label>
+    <input
+      type="number"
+      name="monthly_spend"
+      placeholder="e.g. 30000"
+      required
+    />
 
     <label>Primary scaling metric</label>
-    <select id="metric" required>
+    <select name="metric" required>
       <option value="">Select</option>
       <option value="cpl">CPL / CAC</option>
       <option value="mql">MQL</option>
       <option value="trials">Trials / signups</option>
-      <option value="other">Other</option>
     </select>
 
     <label>Sales involvement</label>
-    <select id="sales" required>
+    <select name="sales_team" required>
       <option value="">Select</option>
       <option value="yes">Yes</option>
       <option value="no">No</option>
     </select>
 
     <label>Company stage</label>
-    <select id="stage" required>
+    <select name="stage" required>
       <option value="">Select</option>
-      <option value="early">Early</option>
       <option value="growth">Growth</option>
       <option value="scale">Scale</option>
     </select>
 
     <label>Business email</label>
-    <input type="email" required />
+    <input
+      type="email"
+      name="email"
+      required
+    />
 
-    <button type="submit">Submit for eligibility review</button>
+    <button type="submit">
+      Submit for eligibility review
+    </button>
 
   </form>
 
@@ -126,30 +145,6 @@
   </div>
 
 </div>
-
-<script>
-  document.getElementById("intakeForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const spend = document.getElementById("spend").value;
-    const metric = document.getElementById("metric").value;
-    const sales = document.getElementById("sales").value;
-    const stage = document.getElementById("stage").value;
-
-    let refuse = false;
-
-    if (spend === "lt30") refuse = true;
-    if (metric === "other") refuse = true;
-    if (sales === "no") refuse = true;
-    if (stage === "early") refuse = true;
-
-    if (refuse) {
-      window.location.href = "/refusal/refusal.html";
-    } else {
-      window.location.href = "/confirmation/confirmation.html";
-    }
-  });
-</script>
 
 </body>
 </html>
