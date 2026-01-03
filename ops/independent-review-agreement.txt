@@ -1,4 +1,5 @@
-INDEPENDENT ECONOMIC SIGNAL REVIEW AGREEMENT
+INDEPENDENT GROWTH SIGNAL ASSESSMENT AGREEMENT
+
 
 This Agreement is entered into between:
 
@@ -16,80 +17,104 @@ Effective Date:
 
 ---
 
-1. Scope of Services
+1. Scope of Assessment
 
-The Service Provider shall perform a one-time, standalone
-independent economic assessment of the Client’s paid
-acquisition scaling signal (“Review”).
+The Service Provider shall perform a one-time, fixed-scope
+independent growth signal assessment (the “Assessment”).
 
-The Review is limited to evaluating whether the signal
-currently used for scaling maintains sufficient causal
-correlation with realized revenue.
+The Assessment is strictly limited to determining whether
+the signal currently used by the Client to justify scaling
+paid acquisition remains economically predictive of
+revenue outcomes at present scale.
 
-No advisory, optimization, implementation, or execution
-services are included.
-
----
-
-2. Nature of the Review
-
-The Review constitutes an independent analytical assessment
-and does not represent consulting, financial advice,
-investment advice, or operational guidance.
-
-The Service Provider does not guarantee outcomes, growth,
-performance improvements, or financial results.
-
-The Review delivers a formal economic verdict only.
+No consulting, advisory, optimization, implementation,
+or execution services are included.
 
 ---
 
-3. Deliverables
+2. Nature of the Assessment
 
-The sole deliverable under this Agreement is a static
-written report provided in PDF format.
+The Assessment constitutes an independent expert
+determination.
 
-No revisions, discussions, clarifications, or follow-up
-services are included.
+It does not represent consulting services, advisory
+services, financial advice, investment advice, or
+operational guidance.
+
+The Assessment does not include recommendations,
+alternative signals, remediation strategies, or
+implementation guidance.
+
+No outcomes, growth results, or performance improvements
+are guaranteed.
+
+---
+
+3. Deliverable
+
+The sole deliverable under this Agreement is a formal
+written determination provided in static PDF format.
+
+The determination states whether the assessed growth
+signal is:
+
+– economically valid at current scale, or
+– no longer economically predictive at current scale.
+
+No revisions, follow-up discussions, interpretations,
+or additional services are included.
 
 ---
 
 4. Fees and Payment
 
-The Review fee is specified in the applicable invoice.
+The fee for the Assessment is specified in the applicable
+invoice.
 
-Payment is due in full prior to delivery.
+Payment is due in full prior to commencement of the
+Assessment.
 
-Delivery is scheduled within 48–72 hours after payment
-confirmation, subject to scope and capacity constraints.
+Delivery of the formal determination is scheduled within
+48–72 hours following payment confirmation, subject to
+capacity constraints.
 
 ---
 
-5. Confidentiality
+5. Confidentiality and Data Handling
 
 The Service Provider shall treat all Client-provided
 information as confidential and use it solely for the
-purpose of conducting the Review.
+purpose of performing the Assessment.
 
-The Client acknowledges that the Review is prepared
-exclusively for internal decision-making purposes.
+The Assessment is based on aggregated performance signals
+only.
+
+No customer-level or personally identifiable data is
+required or processed.
+
+The Assessment is prepared exclusively for the Client’s
+internal decision-making purposes.
 
 ---
 
 6. Limitation of Liability
 
-The Review reflects analytical judgment based on the
-information provided by the Client.
+The Assessment reflects an independent expert judgment
+based solely on the information provided by the Client.
 
 The Service Provider shall not be liable for any decisions,
-actions, losses, or outcomes resulting from the use of the
-Review.
+actions, losses, or outcomes resulting from reliance on
+the Assessment.
+
+The Client acknowledges that the Assessment does not
+constitute advice and should not be relied upon as such.
 
 ---
 
 7. Governing Law
 
-This Agreement shall be governed by the laws of
+This Agreement shall be governed by and construed in
+accordance with the laws of
 {{Ukraine / applicable jurisdiction}}.
 
 ---
@@ -97,19 +122,19 @@ This Agreement shall be governed by the laws of
 8. Entire Agreement
 
 This Agreement constitutes the entire agreement between
-the parties with respect to the Review and supersedes all
-prior communications.
+the parties with respect to the Assessment and supersedes
+all prior communications or understandings.
 
-Acceptance of the invoice and payment thereunder constitutes
-acceptance of this Agreement.
+Acceptance of the invoice and payment thereunder
+constitutes full acceptance of this Agreement.
 
----
 
 Authorized on behalf of the Service Provider:
 
 _________________________
 Name:
 Date:
+
 
 Authorized on behalf of the Client:
 
