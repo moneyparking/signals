@@ -1,41 +1,105 @@
-<form
-  method="POST"
-  action="https://signalreview-intake.moneyparking.workers.dev"
->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eligibility Screening</title>
 
-  <label>Company website</label>
-  <input type="url" name="website" required />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+      background: #ffffff;
+      color: #0f172a;
+      line-height: 1.5;
+    }
 
-  <label>Monthly paid acquisition spend (USD)</label>
-  <input type="number" name="monthly_spend" required />
+    .container {
+      max-width: 640px;
+      margin: 80px auto;
+      padding: 0 24px;
+    }
 
-  <label>Primary scaling metric</label>
-  <select name="metric" required>
-    <option value="">Select</option>
-    <option value="cpl">CPL / CAC</option>
-    <option value="mql">MQL</option>
-    <option value="trials">Trials / signups</option>
-  </select>
+    h1 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
 
-  <label>Sales involvement</label>
-  <select name="sales_team" required>
-    <option value="">Select</option>
-    <option value="yes">Yes</option>
-    <option value="no">No</option>
-  </select>
+    p {
+      font-size: 16px;
+      color: #5f6b63;
+      margin-bottom: 20px;
+    }
 
-  <label>Company stage</label>
-  <select name="stage" required>
-    <option value="">Select</option>
-    <option value="growth">Growth</option>
-    <option value="scale">Scale</option>
-    <option value="pre-revenue">Pre-revenue</option>
-  </select>
+    .notice {
+      background: #f3f7f4;
+      border-left: 4px solid #0f3d2e;
+      padding: 16px;
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
 
-  <label>Business email</label>
-  <input type="email" name="email" required />
+    label {
+      display: block;
+      font-size: 14px;
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
 
-  <button type="submit">
-    Submit for eligibility review
-  </button>
-</form>
+    input, select {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      border: 1px solid #d6e2da;
+      border-radius: 4px;
+    }
+
+    select[multiple] {
+      height: 90px;
+    }
+
+    button {
+      margin-top: 32px;
+      padding: 14px 24px;
+      font-size: 16px;
+      background: #1f2937;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .footnote {
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 24px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Eligibility screening</h1>
+  <p>This is not an application.</p>
+
+  <div class="notice">
+    This screening determines whether an independent economic review
+    can be conducted. No analysis is performed at this stage.
+  </div>
+
+  <form
+    method="POST"
+    action="https://signalreview-intake.moneyparking.workers.dev"
+  >
+
+    <label>Company website</label>
+    <input type="url" name="website" required />
+
+    <label>Monthly paid acquisition spend</label>
+    <select name="monthly_spend" required>
+      <option value="">Select</option>
+      <option value="<$15k">&lt;$15k</option>
+      <option value="$15k–$50k">$15k–$50k</option>
+      <option value="$50k–$100k">$50k–$10
