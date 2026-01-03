@@ -1,1 +1,38 @@
-12
+Company Profile
+
+Legal name:
+{{Your legal name / FOP name}}
+
+Country of registration:
+Ukraine
+
+Business activity:
+Independent economic assessment services
+
+Core offering:
+One-time independent evaluation of paid acquisition
+scaling signal validity for B2B companies.
+
+Nature of services:
+Analytical assessment only.
+No consulting, advisory, optimization, or implementation services.
+
+Engagement model:
+- Standalone procedure
+- Fixed scope
+- Fixed fee
+- No ongoing support
+- No subscription
+
+Delivery format:
+Static written report (PDF)
+
+Typical delivery window:
+48–72 hours after payment confirmation
+
+Primary clients:
+B2B SaaS companies with established paid acquisition spend
+
+Contact:
+{{Business email}}
+
