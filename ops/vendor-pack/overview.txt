@@ -1,0 +1,34 @@
+VENDOR OVERVIEW
+Independent Growth Signal Assessment
+
+
+Service:
+Independent Growth Signal Assessment
+
+Nature:
+One-time, fixed-scope independent expert determination.
+
+Purpose:
+To determine whether the signal used to justify scaling paid
+acquisition remains economically predictive at current scale.
+
+Deliverable:
+Formal written determination (PDF).
+
+Scope exclusions:
+– No consulting or advisory services
+– No optimization or remediation
+– No implementation guidance
+– No ongoing support
+
+Data handling:
+– Aggregated performance signals only
+– No customer-level or personally identifiable data processed
+
+Commercials:
+– Fixed fee
+– One-time engagement
+– No subscription or renewal
+
+This service is designed for internal decision support and
+evaluation of scaling assumptions.
