@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Eligibility Screening</title>
+  <title>Eligibility Screening — Independent Growth Signal Assessment</title>
 
   <style>
     body {
@@ -73,15 +73,15 @@
   <p>This is not an application.</p>
 
   <div class="notice">
-    This screening determines whether an independent economic review
-    can be conducted. No follow-up or discussion is included.
+    This screening determines whether an Independent Growth Signal Assessment
+    can be meaningfully conducted. No analysis is performed at this stage.
   </div>
 
   <!--
     IMPORTANT:
     - Form submits directly to Cloudflare Worker
-    - Eligibility logic + email handling are server-side
-    - Frontend does NOT perform redirects or decisions
+    - Eligibility decision is deterministic and server-side
+    - No assessment is performed during this step
   -->
 
   <form
@@ -97,34 +97,47 @@
       required
     />
 
-    <label>Monthly paid acquisition spend (USD)</label>
-    <input
-      type="number"
-      name="monthly_spend"
-      placeholder="e.g. 30000"
-      required
-    />
+    <label>Monthly paid acquisition spend</label>
+    <select name="monthly_spend" required>
+      <option value="">Select</option>
+      <option value="<15k">&lt; $15k</option>
+      <option value="15k-50k">$15k–$50k</option>
+      <option value="50k-100k">$50k–$100k</option>
+      <option value="100k+">$100k+</option>
+    </select>
 
-    <label>Primary scaling metric</label>
-    <select name="metric" required>
+    <label>Primary scaling signal</label>
+    <select name="scaling_signal" required>
       <option value="">Select</option>
       <option value="cpl">CPL / CAC</option>
-      <option value="mql">MQL</option>
-      <option value="trials">Trials / signups</option>
+      <option value="cpa">CPA</option>
+      <option value="trial_to_paid">Trial-to-paid conversion</option>
+      <option value="other">Other</option>
     </select>
 
-    <label>Sales involvement</label>
-    <select name="sales_team" required>
+    <label>Revenue realization lag</label>
+    <select name="revenue_lag" required>
       <option value="">Select</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
+      <option value="<30">&lt; 30 days</option>
+      <option value="30-60">30–60 days</option>
+      <option value="60-90">60–90 days</option>
+      <option value=">90">&gt; 90 days</option>
+      <option value="unknown">Unknown</option>
     </select>
 
-    <label>Company stage</label>
-    <select name="stage" required>
+    <label>Funnel type</label>
+    <select name="funnel_type" required>
       <option value="">Select</option>
-      <option value="growth">Growth</option>
-      <option value="scale">Scale</option>
+      <option value="self-serve">Self-serve</option>
+      <option value="sales-led">Sales-led</option>
+      <option value="hybrid">Hybrid</option>
+      <option value="pre-revenue">Pre-revenue</option>
+    </select>
+
+    <label>Data availability (select all that apply)</label>
+    <select name="data" multiple required>
+      <option value="spend">Aggregated paid spend</option>
+      <option value="revenue">Aggregated revenue</option>
     </select>
 
     <label>Business email</label>
@@ -135,13 +148,13 @@
     />
 
     <button type="submit">
-      Submit for eligibility review
+      Submit for eligibility screening
     </button>
 
   </form>
 
   <div class="footnote">
-    The process may end at this stage.
+    Eligibility outcomes are limited to: accepted, declined, or under review.
   </div>
 
 </div>
