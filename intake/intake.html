@@ -23,12 +23,14 @@
     h1 {
       font-size: 34px;
       margin-bottom: 12px;
+      text-align: center;
     }
 
     p {
       font-size: 16px;
       color: #5f6b63;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     .notice {
@@ -55,12 +57,13 @@
     }
 
     select[multiple] {
-      height: 90px;
+      height: 100px;
     }
 
     button {
       margin-top: 32px;
-      padding: 14px 24px;
+      width: 100%;
+      padding: 14px;
       font-size: 16px;
       background: #1f2937;
       color: #ffffff;
@@ -73,33 +76,86 @@
       font-size: 13px;
       color: #6b7280;
       margin-top: 24px;
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
 
-  <h1>Eligibility screening</h1>
-  <p>This is not an application.</p>
+    <h1>Eligibility screening</h1>
+    <p>This is not an application.</p>
 
-  <div class="notice">
-    This screening determines whether an independent economic review
-    can be conducted. No analysis is performed at this stage.
+    <div class="notice">
+      This screening determines whether an independent economic review
+      can be conducted. No analysis is performed at this stage.
+    </div>
+
+    <form
+      method="POST"
+      action="https://signalreview-intake.moneyparking.workers.dev"
+    >
+
+      <label>Company website</label>
+      <input type="url" name="website" required />
+
+      <label>Monthly paid acquisition spend</label>
+      <select name="monthly_spend" required>
+        <option value="">Select</option>
+        <option value="<$15k">&lt;$15k</option>
+        <option value="$15k–$50k">$15k–$50k</option>
+        <option value="$50k–$100k">$50k–$100k</option>
+        <option value="$100k+">$100k+</option>
+      </select>
+
+      <label>Primary scaling metric</label>
+      <select name="metric" required>
+        <option value="">Select</option>
+        <option value="cpl">CPL / CAC</option>
+        <option value="mql">MQL</option>
+        <option value="trials">Trials / signups</option>
+      </select>
+
+      <label>Revenue realization lag</label>
+      <select name="revenue_lag" required>
+        <option value="">Select</option>
+        <option value="<30">&lt;30 days</option>
+        <option value="30–60">30–60 days</option>
+        <option value="60–90">60–90 days</option>
+        <option value=">90">&gt;90 days</option>
+      </select>
+
+      <label>Funnel type</label>
+      <select name="funnel_type" required>
+        <option value="">Select</option>
+        <option value="sales-led">Sales-led</option>
+        <option value="product-led">Product-led</option>
+        <option value="hybrid">Hybrid</option>
+      </select>
+
+      <label>Data availability (select all that apply)</label>
+      <select name="data" multiple required>
+        <option value="aggregated_spend">Aggregated paid spend</option>
+        <option value="aggregated_revenue">Aggregated revenue</option>
+        <option value="crm_events">CRM / pipeline events</option>
+      </select>
+
+      <label>Business email</label>
+      <input type="email" name="email" required />
+
+      <button type="submit">
+        Submit for eligibility screening
+      </button>
+
+    </form>
+
+    <div class="footnote">
+      Eligibility outcomes are limited to: accepted, declined, or under review.
+    </div>
+
   </div>
 
-  <form
-    method="POST"
-    action="https://signalreview-intake.moneyparking.workers.dev"
-  >
-
-    <label>Company website</label>
-    <input type="url" name="website" required />
-
-    <label>Monthly paid acquisition spend</label>
-    <select name="monthly_spend" required>
-      <option value="">Select</option>
-      <option value="<$15k">&lt;$15k</option>
-      <option value="$15k–$50k">$15k–$50k</option>
-      <option value="$50k–$100k">$50k–$10
+</body>
+</html>
