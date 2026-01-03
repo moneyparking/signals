@@ -1,0 +1,39 @@
+MoR COMPLIANCE SUMMARY
+Independent Growth Signal Assessment
+
+
+Service type:
+One-time independent expert determination.
+
+Nature of service:
+Analytical assessment of economic signal predictiveness.
+No consulting, advisory, optimization, or implementation services provided.
+
+Deliverable:
+Single static written determination delivered as PDF.
+
+Pricing model:
+Fixed, one-time fee.
+No subscriptions, renewals, or usage-based billing.
+
+Customer interaction:
+– No ongoing engagement
+– No live support
+– No follow-up services included
+
+Data handling:
+– Aggregated performance data only
+– No personally identifiable information processed
+– No system access or integrations required
+
+Refunds:
+Handled according to refund-policy.txt.
+
+Disputes:
+Resolved based on scope definition and agreement terms.
+
+Jurisdiction:
+As specified in independent-review-agreement.txt.
+
+This service is designed for internal decision support
+and does not constitute financial, marketing, or operational advice.
