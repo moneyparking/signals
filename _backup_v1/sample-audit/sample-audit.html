@@ -1,1 +1,213 @@
-backup placeholder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sample Economic Signal Audit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <style>
+    body {
+      margin: 0;
+      background: #f6f7f8;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif;
+      color: #0f172a;
+      line-height: 1.55;
+    }
+
+    .page {
+      max-width: 820px;
+      margin: 64px auto;
+      background: #ffffff;
+      padding: 72px 88px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-top: 48px;
+      margin-bottom: 14px;
+      color: #0f3d2e;
+    }
+
+    h3 {
+      font-size: 15px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #374151;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    ul {
+      margin-top: 8px;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #5f6b63;
+      margin-bottom: 28px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #e2e8f0;
+      margin: 40px 0;
+    }
+
+    .box {
+      background: #f3f7f4;
+      border-left: 4px solid #0f3d2e;
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-size: 14px;
+    }
+
+    .mono {
+      background: #0f172a;
+      color: #e5e7eb;
+      padding: 16px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 13px;
+      border-radius: 6px;
+      margin: 16px 0;
+      white-space: pre-wrap;
+    }
+
+    .verdict {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 28px;
+      border-radius: 8px;
+      margin-top: 32px;
+    }
+
+    .verdict strong {
+      font-size: 18px;
+    }
+
+    .footer {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 48px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <h1>Economic Signal Audit — Sample</h1>
+  <div class="meta">
+    Independent review · Anonymized · Illustrative example only
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>1. Audit Scope</h2>
+  <p>
+    This document illustrates an example of an independent economic audit
+    focused on validating signal integrity within a paid acquisition system.
+  </p>
+
+  <div class="box">
+    This sample demonstrates output format and decision logic only.
+    Full diagnostic requires an independent review with complete rule coverage,
+    verified data linkage, and confidence scoring.
+  </div>
+
+  <h2>2. Signal Under Review</h2>
+  <p>Primary scaling trigger evaluated:</p>
+  <ul>
+    <li>Cost Per Lead (CPL)</li>
+  </ul>
+
+  <p>
+    The organization continued scaling paid acquisition based on CPL stability,
+    despite delayed and weakening revenue response downstream.
+  </p>
+
+  <h2>3. Rule Evaluation (excerpt)</h2>
+
+  <div class="mono">
+Rule ID: S-04
+
+IF scaling trigger = CPL
+AND revenue lag > 2 sales cycles
+THEN signal validity = broken
+  </div>
+
+  <p>
+    This rule tests whether a proxy metric used for scaling decisions
+    remains causally correlated with realized revenue outcomes.
+  </p>
+
+  <h2>4. Economic Impact Calculation</h2>
+
+  <h3>Loss source</h3>
+  <p>
+    Loss is attributed to continued spend beyond the point
+    where CPL ceased to reflect marginal revenue efficiency.
+  </p>
+
+  <div class="mono">
+Baseline marginal CAC:    $980
+Scaled marginal CAC:      $1,420
+
+Marginal inefficiency:    $440 per deal
+Annualized deal volume:  310
+
+Estimated annual loss:
+$110,000 – $160,000
+  </div>
+
+  <p>
+    Loss range reflects sensitivity to attribution lag and
+    deal conversion variance across observed periods.
+  </p>
+
+  <h2>5. Economic Verdict</h2>
+
+  <div class="verdict">
+    <strong>Verdict: SIGNAL INVALID</strong><br/><br/>
+    Scaling decisions based on CPL are no longer
+    economically justified under current system conditions.
+    <br/><br/>
+    Continued scaling without signal correction
+    is expected to generate incremental economic loss.
+  </div>
+
+  <h2>6. Confidence & Limitations</h2>
+
+  <ul>
+    <li>Confidence level: <strong>Moderate–High</strong></li>
+    <li>Assessment limited to observed paid acquisition channels</li>
+    <li>No counterfactual optimization scenarios included</li>
+    <li>Remediation paths intentionally excluded from this audit</li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <div class="footer">
+    This document is provided as a public sample of an audit artifact.
+    It does not constitute financial, marketing, or operational advice.
+  </div>
+
+</div>
+
+</body>
+</html>
+
