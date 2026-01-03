@@ -1,1 +1,119 @@
-12
+INDEPENDENT ECONOMIC SIGNAL REVIEW AGREEMENT
+
+This Agreement is entered into between:
+
+Service Provider:
+{{Your legal name / FOP name}}
+{{Country}}
+
+and
+
+Client:
+{{Client company legal name}}
+
+Effective Date:
+{{DD Month YYYY}}
+
+---
+
+1. Scope of Services
+
+The Service Provider shall perform a one-time, standalone
+independent economic assessment of the Client’s paid
+acquisition scaling signal (“Review”).
+
+The Review is limited to evaluating whether the signal
+currently used for scaling maintains sufficient causal
+correlation with realized revenue.
+
+No advisory, optimization, implementation, or execution
+services are included.
+
+---
+
+2. Nature of the Review
+
+The Review constitutes an independent analytical assessment
+and does not represent consulting, financial advice,
+investment advice, or operational guidance.
+
+The Service Provider does not guarantee outcomes, growth,
+performance improvements, or financial results.
+
+The Review delivers a formal economic verdict only.
+
+---
+
+3. Deliverables
+
+The sole deliverable under this Agreement is a static
+written report provided in PDF format.
+
+No revisions, discussions, clarifications, or follow-up
+services are included.
+
+---
+
+4. Fees and Payment
+
+The Review fee is specified in the applicable invoice.
+
+Payment is due in full prior to delivery.
+
+Delivery is scheduled within 48–72 hours after payment
+confirmation, subject to scope and capacity constraints.
+
+---
+
+5. Confidentiality
+
+The Service Provider shall treat all Client-provided
+information as confidential and use it solely for the
+purpose of conducting the Review.
+
+The Client acknowledges that the Review is prepared
+exclusively for internal decision-making purposes.
+
+---
+
+6. Limitation of Liability
+
+The Review reflects analytical judgment based on the
+information provided by the Client.
+
+The Service Provider shall not be liable for any decisions,
+actions, losses, or outcomes resulting from the use of the
+Review.
+
+---
+
+7. Governing Law
+
+This Agreement shall be governed by the laws of
+{{Ukraine / applicable jurisdiction}}.
+
+---
+
+8. Entire Agreement
+
+This Agreement constitutes the entire agreement between
+the parties with respect to the Review and supersedes all
+prior communications.
+
+Acceptance of the invoice and payment thereunder constitutes
+acceptance of this Agreement.
+
+---
+
+Authorized on behalf of the Service Provider:
+
+_________________________
+Name:
+Date:
+
+Authorized on behalf of the Client:
+
+_________________________
+Name:
+Date:
+
