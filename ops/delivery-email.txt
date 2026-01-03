@@ -1,20 +1,29 @@
 Subject:
-Independent Economic Signal Review — Delivery
+Independent Growth Signal Assessment — Formal Determination
+
 
 Body:
 Hello,
 
-Attached is the independent economic signal review
-prepared based on the intake information provided.
+Attached is the formal written determination resulting from the
+Independent Growth Signal Assessment conducted based on the
+information provided during intake.
 
-The document contains a formal economic verdict regarding
-the validity of the scaling signal currently in use.
+This determination states whether the signal currently used to
+justify scaling paid acquisition remains economically predictive
+at present scale.
 
-No remediation steps, optimization advice, or implementation
-recommendations are included by design.
+As defined by scope, this assessment:
+– does not include recommendations,
+– does not propose alternative signals,
+– does not provide optimization or implementation guidance.
 
-This review is intended to support internal decision-making
-and capital allocation assessment.
+The determination is intended solely to support internal
+decision-making and evaluation of scaling assumptions.
+
+If you have any questions regarding the scope or interpretation
+of the determination, please refer to the assessment agreement.
+No follow-up services are included.
 
 Regards,
-Independent Signal Review
+Independent Growth Signal Assessment
