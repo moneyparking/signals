@@ -1,1 +1,151 @@
-gfkjf
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eligibility Screening</title>
+
+  <style>
+    body {
+      margin:0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+      background:#ffffff;
+      color:#0f172a;
+      line-height:1.5;
+    }
+
+    .container {
+      max-width:640px;
+      margin:80px auto;
+      padding:0 24px;
+    }
+
+    h1 { font-size:34px; margin-bottom:12px; }
+    p { font-size:16px; color:#5f6b63; margin-bottom:20px; }
+
+    .notice {
+      background:#f3f7f4;
+      border-left:4px solid #0f3d2e;
+      padding:16px;
+      font-size:14px;
+      margin-bottom:32px;
+    }
+
+    label {
+      display:block;
+      font-size:14px;
+      margin-bottom:6px;
+      margin-top:20px;
+    }
+
+    input, select {
+      width:100%;
+      padding:10px;
+      font-size:15px;
+      border:1px solid #d6e2da;
+      border-radius:4px;
+    }
+
+    button {
+      margin-top:32px;
+      padding:14px 24px;
+      font-size:16px;
+      background:#1f2937;
+      color:#ffffff;
+      border:none;
+      border-radius:6px;
+      cursor:pointer;
+    }
+
+    .footnote {
+      font-size:13px;
+      color:#6b7280;
+      margin-top:24px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Eligibility screening</h1>
+  <p>This is not an application.</p>
+
+  <div class="notice">
+    This screening determines whether an independent economic review
+    can be conducted. No follow-up or discussion is included.
+  </div>
+
+  <!--
+    IMPORTANT:
+    - Form submits directly to Cloudflare Worker
+    - Eligibility logic + email handling are server-side
+    - Frontend does NOT perform redirects or decisions
+  -->
+
+  <form
+    method="POST"
+    action="https://patient-cake-7154.moneyparking.workers.dev"
+  >
+
+    <label>Company website</label>
+    <input
+      type="url"
+      name="website"
+      value="https://"
+      required
+    />
+
+    <label>Monthly paid acquisition spend (USD)</label>
+    <input
+      type="number"
+      name="monthly_spend"
+      placeholder="e.g. 30000"
+      required
+    />
+
+    <label>Primary scaling metric</label>
+    <select name="metric" required>
+      <option value="">Select</option>
+      <option value="cpl">CPL / CAC</option>
+      <option value="mql">MQL</option>
+      <option value="trials">Trials / signups</option>
+    </select>
+
+    <label>Sales involvement</label>
+    <select name="sales_team" required>
+      <option value="">Select</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <label>Company stage</label>
+    <select name="stage" required>
+      <option value="">Select</option>
+      <option value="growth">Growth</option>
+      <option value="scale">Scale</option>
+    </select>
+
+    <label>Business email</label>
+    <input
+      type="email"
+      name="email"
+      required
+    />
+
+    <button type="submit">
+      Submit for eligibility review
+    </button>
+
+  </form>
+
+  <div class="footnote">
+    The process may end at this stage.
+  </div>
+
+</div>
+
+</body>
+</html>
+
