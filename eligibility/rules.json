@@ -1,0 +1,36 @@
+{
+  "hard_decline": [
+    {
+      "id": "E-01",
+      "description": "Insufficient scale",
+      "condition": "monthly_spend === '<15k'"
+    },
+    {
+      "id": "E-02",
+      "description": "Missing scaling signal",
+      "condition": "!scaling_signal"
+    },
+    {
+      "id": "E-03",
+      "description": "Revenue lag unknown",
+      "condition": "revenue_lag === 'unknown'"
+    },
+    {
+      "id": "E-04",
+      "description": "Insufficient data availability",
+      "condition": "!data.includes('spend') || !data.includes('revenue')"
+    },
+    {
+      "id": "E-05",
+      "description": "Pre-revenue funnel",
+      "condition": "funnel_type === 'pre-revenue'"
+    }
+  ],
+  "manual_review": [
+    {
+      "id": "M-01",
+      "description": "High spend with long lag",
+      "condition": "monthly_spend === '100k+' && revenue_lag === '>90' && funnel_type === 'hybrid'"
+    }
+  ]
+}
