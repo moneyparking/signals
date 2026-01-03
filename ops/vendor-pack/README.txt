@@ -1,13 +1,20 @@
-Vendor Onboarding Pack
+Vendor Pack — Independent Growth Signal Assessment
+This vendor pack contains formal reference materials for
+Independent Growth Signal Assessment.
 
-This folder contains documents provided only upon
-explicit client request (legal, finance, procurement).
+The documents are provided to support internal review,
+procurement, and payment processing.
 
-Do not attach proactively.
-Do not publish publicly.
-Do not customize language per client unless legally required.
+No marketing materials, proposals, or sales documentation
+are included by design.
 
-Default order of use:
-1. Company profile
-2. Capability statement
-3. W-8BEN-E (upon payment setup)
+Contents:
+– Vendor overview
+– Scope summary
+– Pricing & invoice note
+– Capacity policy
+– Sample determination
+– Contact details
+
+All assessments are conducted under a fixed scope and
+delivered as a one-time formal written determination.
