@@ -47,7 +47,7 @@
       background: #f8fafc;
     }
 
-    /* ===== PRINT CONTROL ===== */
+    /* ===== PRINT SAFETY ===== */
     @media print {
       p, li {
         orphans: 3;
@@ -68,6 +68,7 @@
 
 <body>
 
+  <!-- PAGE 1 -->
   <h1>Independent Growth Signal Assessment — Sample</h1>
 
   <div class="meta">
@@ -111,7 +112,11 @@
     </p>
   </div>
 
-  <h2 style="page-break-before: always;">5. Limitations & Exclusions</h2>
+  <!-- PAGE 2 (HARD BREAK) -->
+  <h2 style="page-break-before: always;">
+    5. Limitations & Exclusions
+  </h2>
+
   <ul>
     <li>No optimization or remediation guidance</li>
     <li>No alternative signals proposed</li>
@@ -119,7 +124,6 @@
     <li>Illustrative example only</li>
   </ul>
 
-  <!-- DISLCAIMER (FIXED PAGE BEHAVIOR) -->
   <p class="legal-disclaimer">
     This document constitutes an illustrative example of an independent growth
     signal determination. It does not constitute consulting, advisory, financial,
