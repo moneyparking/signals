@@ -86,6 +86,24 @@
       color: #111;
     }
   </style>
+  <style>
+  @media print {
+    p, li {
+      orphans: 3;
+      widows: 3;
+    }
+
+    .legal-disclaimer {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      margin-top: 24px;
+      font-size: 12px;
+      line-height: 1.4;
+      color: #4b5563;
+    }
+  }
+</style>
+
 </head>
 
 <body>
