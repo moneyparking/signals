@@ -1,0 +1,233 @@
+SignalReview — Founding Review
+Operational Pipeline (Workers & Flow)
+0. ENTRY POINT — LANDING & FORM
+
+URL:
+https://signalreview.co
+
+Функция:
+
+Презентация Founding Review ($400)
+
+Сбор входных данных клиента через форму
+
+Формирование Assessment ID (FR-XXXX)
+
+Выход:
+
+Email клиента
+
+Assessment ID
+
+Input payload (бизнес-описание, ссылки, ответы)
+
+1. PAYMENT CONFIRMATION (MANUAL / PAYONEER)
+
+Инструмент:
+
+Payoneer (manual confirmation)
+
+Функция:
+
+Проверка факта оплаты
+
+Решение: оплата подтверждена / не подтверждена
+
+Выход:
+
+Триггер post-payment email
+
+2. WORKER: post-payment-mailer
+
+Cloudflare Worker:
+post-payment-mailer
+
+Вход (POST):
+
+{
+  "email": "client@email.com",
+  "assessment_id": "FR-XXXX"
+}
+
+
+Функция:
+
+Отправка письма о подтверждении оплаты
+
+Фиксация Assessment ID
+
+Коммуникация SLA (72 hours)
+
+Ссылка на reassurance-страницу
+
+Выход:
+
+Email клиенту:
+
+Payment confirmed
+
+Assessment ID
+
+What happens next
+
+SLA
+
+BCC → signal@signalreview.co (внутренний контроль)
+
+3. REASSURANCE PAGE
+
+URL:
+https://signalreview.co/payment-success.html
+
+Функция:
+
+Снижение тревоги после оплаты
+
+Подтверждение процесса
+
+Отсутствие CTA / upsell
+
+Выход:
+
+Клиент информирован
+
+Нет дополнительных действий
+
+4. FOUNDING REVIEW PIPELINE (INTERNAL)
+
+Функция:
+
+Проверка полноты и консистентности входных данных
+
+Анализ по метрикам A–H
+
+Определение Scaling Signal (YES / NO)
+
+Принципы:
+
+Fixed scope
+
+No advisory
+
+No optimization
+
+Independent determination
+
+Выход:
+
+Structured result
+
+Assessment ID → Result mapping
+
+5. PDF GENERATION
+
+Сервис:
+pdf-diagnostic (Playwright + HTML → PDF)
+
+Функция:
+
+Рендер Founding Review из founding-review.html
+
+Генерация PDF
+
+Загрузка в Cloudflare R2
+
+Генерация signed URL
+
+Выход:
+
+pdf_url (временная secure-ссылка)
+
+6. WORKER: delivery-worker
+
+Cloudflare Worker:
+delivery-worker
+
+Вход (POST):
+
+{
+  "email": "client@email.com",
+  "assessment_id": "FR-XXXX",
+  "pdf_url": "https://r2.cloudflare.com/..."
+}
+
+
+Функция:
+
+Доставка Founding Review PDF клиенту
+
+Юридически корректное письмо
+
+Assessment ID в subject
+
+BCC → signal@signalreview.co
+
+Выход:
+
+Email клиенту с PDF
+
+Внутренняя копия (через BCC + переадресацию)
+
+7. POST-DELIVERY STATE
+
+Функция:
+
+Процесс завершён
+
+Нет обязательств по follow-up
+
+Нет автоматического upsell
+
+Примечание:
+
+PDF1200 / v2 pipeline — отдельный будущий продукт
+
+Не часть текущего Founding Review
+
+8. SUPPORTING INFRASTRUCTURE
+
+Email:
+
+Resend
+
+SPF + DKIM + Domain Verified
+
+Storage:
+
+Cloudflare R2 (PDF)
+
+Workers:
+
+post-payment-mailer
+
+delivery-worker
+
+Frontend Hosting:
+
+GitHub Pages
+
+Cloudflare CDN
+
+9. LEGAL / IP BOUNDARY (FIXED)
+
+Methodology = Trade Secret
+
+PDF + HTML = Copyright
+
+No advisory relationship
+
+No implied success / failure
+
+PIPELINE STATUS
+
+Payment flow — READY
+
+Email delivery — STABLE
+
+PDF generation — STABLE
+
+Internal visibility — STABLE
+
+Production-ready — YES
+
+END OF FILE
