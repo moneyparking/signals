@@ -4,37 +4,44 @@
   <meta charset="UTF-8" />
   <title>Request Founding Review</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
     body {
       font-family: Inter, Arial, sans-serif;
-      background: #fff;
+      background: #ffffff;
       color: #111;
       line-height: 1.6;
       margin: 0;
     }
+
     .container {
       max-width: 760px;
       margin: 0 auto;
       padding: 56px 24px;
     }
+
     h1 {
       font-size: 32px;
       margin-bottom: 8px;
     }
+
     h2 {
       font-size: 20px;
       margin-top: 48px;
     }
+
     p {
       font-size: 14px;
       color: #444;
     }
+
     label {
       display: block;
       margin-top: 20px;
       font-weight: 600;
       font-size: 14px;
     }
+
     input, textarea, select {
       width: 100%;
       margin-top: 6px;
@@ -42,15 +49,20 @@
       font-size: 14px;
       border: 1px solid #ccc;
     }
+
     textarea {
       min-height: 100px;
     }
+
     .checkbox {
-      margin-top: 20px;
+      margin-top: 18px;
+      font-size: 14px;
     }
-    .checkbox label {
-      font-weight: normal;
+
+    .checkbox input {
+      margin-right: 8px;
     }
+
     button {
       margin-top: 32px;
       padding: 14px 24px;
@@ -59,7 +71,9 @@
       border: 2px solid #000;
       background: #fff;
       cursor: pointer;
+      width: 100%;
     }
+
     button:hover {
       background: #000;
       color: #fff;
@@ -76,13 +90,19 @@
   Founding Review determination.
 </p>
 
+<form action="/payment" method="POST">
+
 <h2>A. Identification</h2>
 
 <label>Contact email</label>
 <input type="email" required />
 
-<label>Project / Product name</label>
-<input type="text" required />
+<label>Project / Product URL</label>
+<input
+  type="url"
+  placeholder="https://example.com"
+  required
+/>
 
 <h2>B. Product Context</h2>
 
@@ -94,7 +114,7 @@
 
 <h2>C. Market Interaction Signals</h2>
 
-<label>Who has already interacted with this product? (users, customers, internal teams)</label>
+<label>Who has already interacted with this product?</label>
 <textarea required></textarea>
 
 <label>What frictions or resistance have you observed?</label>
@@ -122,27 +142,29 @@
 <div class="checkbox">
   <label>
     <input type="checkbox" required />
-    I understand this is an independent analytical determination, not advice or consulting.
+    This is an independent analytical determination, not consulting or advice.
   </label>
 </div>
 
 <div class="checkbox">
   <label>
     <input type="checkbox" required />
-    I understand the output is a binary scaling signal (YES / NO), not a recommendation.
+    The output is a binary scaling signal (YES / NO), not a recommendation.
   </label>
 </div>
 
 <div class="checkbox">
   <label>
     <input type="checkbox" required />
-    I confirm the information provided is accurate to the best of my knowledge.
+    The information provided is accurate to the best of my knowledge.
   </label>
 </div>
 
 <button type="submit">
-  Proceed to Payment
+  Proceed to Payment — $400
 </button>
+
+</form>
 
 </div>
 </body>
