@@ -2,134 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Independent Growth Signal Assessment — Sample</title>
-
+  <title>Founding Review</title>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif;
-      color: #0f172a;
-      line-height: 1.55;
-      margin: 0;
-      padding: 48px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 1.45;
+      color: #111;
+      margin: 40px;
     }
 
     h1 {
-      font-size: 28px;
-      margin-bottom: 12px;
+      font-size: 22px;
+      margin-bottom: 6px;
     }
 
     h2 {
-      font-size: 18px;
-      margin-top: 32px;
-      margin-bottom: 8px;
+      font-size: 16px;
+      margin-top: 28px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 4px;
     }
 
-    p {
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-
-    ul {
-      margin-left: 18px;
-      font-size: 14px;
+    h3 {
+      font-size: 13px;
+      margin-top: 18px;
     }
 
     .meta {
-      font-size: 12px;
-      color: #475569;
-      margin-bottom: 32px;
+      font-size: 11px;
+      color: #555;
+      margin-bottom: 24px;
     }
 
-    .determination {
-      margin-top: 24px;
-      padding: 16px;
-      border-left: 4px solid #0f172a;
-      background: #f8fafc;
+    .box {
+      border: 1px solid #ddd;
+      padding: 12px;
+      margin: 14px 0;
+      background: #fafafa;
     }
 
-    /* ===== PRINT SAFETY ===== */
-    @media print {
-      p, li {
-        orphans: 3;
-        widows: 3;
-      }
+    .metric {
+      margin-bottom: 10px;
+    }
 
-      .legal-disclaimer {
-        break-inside: avoid;
-        page-break-inside: avoid;
-        margin-top: 24px;
-        font-size: 12px;
-        line-height: 1.4;
-        color: #4b5563;
-      }
+    .metric span {
+      font-weight: bold;
+    }
+
+    .verdict {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 14px;
+      border: 2px solid #000;
+      margin-top: 18px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 10px;
+      color: #666;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- PAGE 1 -->
-  <h1>Independent Growth Signal Assessment — Sample</h1>
-
+  <h1>Founding Review</h1>
   <div class="meta">
-    Illustrative determination · Anonymized · Public example only
+    Independent Economic Determination<br/>
+    Fixed Scope · One-Time Review · No Advisory · No Optimization<br/>
+    Assessment ID: <strong>{{ASSESSMENT_ID}}</strong><br/>
+    Generated: {{GENERATED_AT}}
   </div>
 
-  <h2>1. Scope of Assessment</h2>
-  <p>
-    This document illustrates the format and substance of an independent
-    assessment determining whether a growth signal used for scaling remains
-    economically predictive of revenue outcomes.
-  </p>
-
-  <p>
-    This is an illustrative sample only. A live assessment is conducted as a
-    fixed-scope, one-time engagement based on aggregated performance signals.
-  </p>
-
-  <h2>2. Signal Assessed</h2>
-  <p><strong>Cost Per Lead (CPL)</strong></p>
-
-  <p>
-    In this illustrative scenario, scaling decisions continued to rely on CPL
-    stability despite a material lag and weakening correlation with realized
-    revenue.
-  </p>
-
-  <h2>3. Basis for Determination (excerpt)</h2>
-  <p>
-    If the scaling signal remains stable while revenue realization materially
-    lags beyond acceptable system thresholds, the signal is no longer
-    economically predictive.
-  </p>
-
-  <h2>4. Determination</h2>
-  <div class="determination">
-    <p><strong>Determination: SIGNAL NO LONGER PREDICTIVE</strong></p>
-    <p>
-      Based on the assessed conditions, the signal used to justify scaling does
-      not remain economically predictive at current scale.
-    </p>
+  <h2>1. Scope & Limitations</h2>
+  <div class="box">
+    This document provides an independent determination based on submitted materials
+    and observed signals. It does not include recommendations, strategic advice,
+    implementation guidance, or projections. No optimization actions are implied or suggested.
   </div>
 
-  <!-- PAGE 2 (HARD BREAK) -->
-  <h2 style="page-break-before: always;">
-    5. Limitations & Exclusions
-  </h2>
+  <h2>2. Input Integrity Statement</h2>
+  <div class="box">
+    The assessment is based solely on the inputs provided at the time of review.
+    No external assumptions, market forecasts, or undisclosed data sources were used.
+    Input completeness and consistency were evaluated prior to analysis.
+  </div>
 
-  <ul>
-    <li>No optimization or remediation guidance</li>
-    <li>No alternative signals proposed</li>
-    <li>No implementation or operational advice</li>
-    <li>Illustrative example only</li>
-  </ul>
+  <h2>3. Metrics Summary (A–H)</h2>
+  <div class="box">
 
-  <p class="legal-disclaimer">
-    This document constitutes an illustrative example of an independent growth
-    signal determination. It does not constitute consulting, advisory, financial,
-    or operational services. The determination is intended to inform
-    decision-making, not to replace internal judgment or accountability.
-  </p>
+    <div class="metric"><span>A. Problem Signal:</span> {{METRIC_A}}</div>
+    <div class="metric"><span>B. Market Friction:</span> {{METRIC_B}}</div>
+    <div class="metric"><span>C. Willingness to Pay:</span> {{METRIC_C}}</div>
+    <div class="metric"><span>D. Competitive Compression:</span> {{METRIC_D}}</div>
+    <div class="metric"><span>E. Value Density:</span> {{METRIC_E}}</div>
+    <div class="metric"><span>F. Operational Repeatability:</span> {{METRIC_F}}</div>
+    <div class="metric"><span>G. Signal Stability:</span> {{METRIC_G}}</div>
+    <div class="metric"><span>H. Execution Dependency:</span> {{METRIC_H}}</div>
+
+  </div>
+
+  <h2>4. Scaling Signal Determination</h2>
+  <div class="box">
+    Based on the observed configuration of metrics A–H, the following binary determination
+    was made regarding scalability under current conditions.
+  </div>
+
+  <div class="verdict">
+    SCALING SIGNAL: {{SCALING_VERDICT}}
+  </div>
+
+  <h2>5. Determination Statement</h2>
+  <div class="box">
+    This Founding Review represents a bounded analytical determination.
+    The presence or absence of a scaling signal does not imply success, failure,
+    endorsement, or rejection of the evaluated initiative.
+  </div>
+
+  <h2>6. Method Confidentiality Notice</h2>
+  <div class="box">
+    The structure, ordering, and interpretation logic of this document constitute
+    proprietary analytical methodology. Redistribution or reuse of the method
+    without authorization is prohibited.
+  </div>
+
+  <div class="footer">
+    © SignalReview. All rights reserved.<br/>
+    This document is provided under a limited-use license for the named recipient only.
+  </div>
 
 </body>
 </html>
