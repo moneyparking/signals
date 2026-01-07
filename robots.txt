@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /audit/
+Disallow: /tmp/
+Disallow: /*.pdf$
+
+Sitemap: https://signalreview.co/sitemap.xml
