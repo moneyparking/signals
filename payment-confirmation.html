@@ -41,7 +41,7 @@
       letter-spacing: -0.01em;
     }
 
-    p {
+    p, li {
       font-size: 15px;
       color: #333;
       max-width: 700px;
@@ -49,7 +49,6 @@
 
     ul {
       margin-left: 18px;
-      font-size: 15px;
     }
 
     .box {
@@ -81,7 +80,7 @@
     }
 
     .micro {
-      margin-top: 14px;
+      margin-top: 12px;
       font-size: 13px;
       color: #666;
     }
@@ -121,9 +120,6 @@
   </div>
 
   <h2>After payment confirmation</h2>
-  <p>
-    Once payment is confirmed:
-  </p>
   <ul>
     <li>Your Assessment ID will be generated</li>
     <li>You will receive a confirmation email</li>
@@ -138,7 +134,10 @@
   </p>
 
   <div class="cta">
-    <a href="https://signalreview.co/payment">Proceed to Secure Payment</a>
+    <!-- Финальный переход на оплату -->
+    <a href="/payment">
+      Proceed to Secure Payment
+    </a>
     <div class="micro">
       One-time payment · No subscription · No recurring charges
     </div>
