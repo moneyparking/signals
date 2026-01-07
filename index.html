@@ -2,240 +2,156 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Founding Review — Independent Economic Determination</title>
+  <title>SignalReview — Founding Review</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
-    :root {
-      --bg: #ffffff;
-      --text: #111111;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-      --accent: #111111;
-      --accent-bg: #f9fafb;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: Inter, Arial, sans-serif;
+      background: #ffffff;
+      color: #111;
       line-height: 1.6;
     }
 
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 72px 24px;
+    /* HERO */
+    .hero-solid {
+      background: #0b0b0c;
+      color: #ffffff;
+      padding: 96px 24px;
     }
 
-    h1 {
-      font-size: 42px;
-      line-height: 1.2;
-      margin: 0 0 16px;
+    .hero-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      opacity: 0.7;
+      margin-bottom: 16px;
+    }
+
+    .hero-solid h1 {
+      font-size: 52px;
+      margin: 0 0 20px;
       letter-spacing: -0.02em;
     }
 
+    .hero-subtitle {
+      font-size: 18px;
+      max-width: 760px;
+      opacity: 0.9;
+    }
+
+    .hero-meta {
+      margin-top: 20px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    .hero-sla {
+      margin-top: 24px;
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    .cta-solid {
+      display: inline-block;
+      margin-top: 36px;
+      padding: 16px 32px;
+      border: 2px solid #ffffff;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .cta-solid:hover {
+      background: #ffffff;
+      color: #0b0b0c;
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
     h2 {
-      font-size: 26px;
-      margin-top: 64px;
-      margin-bottom: 16px;
-      letter-spacing: -0.01em;
+      margin-top: 48px;
+      font-size: 22px;
     }
 
     p {
-      max-width: 760px;
-      font-size: 16px;
-    }
-
-    ul, ol {
-      max-width: 760px;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    .hero {
-      padding-bottom: 48px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .subtitle {
-      font-size: 18px;
-      color: var(--muted);
-      max-width: 720px;
-    }
-
-    .meta {
-      margin-top: 24px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .cta {
-      display: inline-block;
-      margin-top: 32px;
-      padding: 14px 28px;
       font-size: 15px;
-      font-weight: 600;
-      border: 2px solid var(--accent);
-      color: var(--accent);
-      text-decoration: none;
-      transition: all 0.15s ease;
-    }
-
-    .cta:hover {
-      background: var(--accent);
-      color: #ffffff;
-    }
-
-    .section-box {
-      background: var(--accent-bg);
-      border: 1px solid var(--border);
-      padding: 32px;
-      margin-top: 32px;
-    }
-
-    .price {
-      font-size: 36px;
-      font-weight: 700;
-      margin: 8px 0;
-    }
-
-    .divider {
-      height: 1px;
-      background: var(--border);
-      margin: 64px 0;
+      color: #333;
     }
 
     .footer {
-      margin-top: 96px;
-      padding-top: 32px;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid #eee;
+      margin-top: 80px;
+      padding: 32px 24px;
       font-size: 13px;
-      color: var(--muted);
-      max-width: 760px;
-    }
-
-    @media (max-width: 640px) {
-      h1 {
-        font-size: 34px;
-      }
-      h2 {
-        font-size: 22px;
-      }
+      color: #666;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
+<section class="hero-solid">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Independent Economic Determination</div>
 
-    <!-- HERO -->
-    <section class="hero">
-      <h1>Founding Review</h1>
+    <h1>Founding Review</h1>
 
-      <p class="subtitle">
-        Independent Economic Determination for Early-Stage Products
-      </p>
+    <p class="hero-subtitle">
+      A one-time, fixed-scope analytical determination of whether a scalable
+      economic signal is present — without advisory, projections, or optimization.
+    </p>
 
-      <p>
-        A one-time, fixed-scope review that determines whether a scalable
-        economic signal is present — without advice, projections, or
-        optimization.
-      </p>
-
-      <div class="meta">
-        Fixed Scope · One-Time Review · No Advisory · No Optimization
-      </div>
-
-      <a href="/request-founding-review" class="cta">
-        Request Founding Review — $400
-      </a>
-    </section>
-
-    <!-- WHAT IS -->
-    <section>
-      <h2>What is Founding Review?</h2>
-
-      <p>
-        Founding Review is an independent analytical determination based solely
-        on the materials you submit. It evaluates a closed set of internal
-        economic and execution signals.
-      </p>
-
-      <p><strong>
-        It answers one bounded question:
-        <br/>
-        Is there a detectable scaling signal — yes or no?
-      </strong></p>
-    </section>
-
-    <!-- WHAT YOU RECEIVE -->
-    <section>
-      <h2>What You Receive</h2>
-
-      <ul>
-        <li>Founding Review PDF (single recipient)</li>
-        <li>Assessment of 8 internal metrics (A–H)</li>
-        <li>Binary scaling signal determination (YES / NO)</li>
-        <li>Clear scope and limitation statements</li>
-      </ul>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section>
-      <h2>How It Works</h2>
-
-      <ol>
-        <li>You submit your materials</li>
-        <li>Inputs are checked for internal consistency</li>
-        <li>Signals are evaluated as a closed system</li>
-        <li>You receive the Founding Review PDF</li>
-      </ol>
-    </section>
-
-    <!-- PRICING -->
-    <section class="section-box">
-      <h2>Pricing</h2>
-
-      <div class="price">$400</div>
-
-      <p>
-        One-time, fixed-scope Founding Review.
-        <br/>
-        No subscriptions. No upsells.
-      </p>
-
-      <a href="/request-founding-review" class="cta">
-        Request Founding Review — $400
-      </a>
-    </section>
-
-    <!-- LEGAL -->
-    <div class="footer">
-      <p>
-        The Founding Review constitutes an independent analytical determination.
-        It does not represent advice, endorsement, prediction, or recommendation.
-      </p>
-
-      <p>
-        The structure, signal composition, and interpretation logic of the review
-        are proprietary and protected as confidential trade secrets. Redistribution
-        or reuse without authorization is prohibited.
-      </p>
-
-      <p>© SignalReview. All rights reserved.</p>
+    <div class="hero-meta">
+      Fixed Scope · One-Time Review · No Advisory · No Optimization
     </div>
 
+    <div class="hero-sla">
+      Delivery SLA: <strong>within 72 hours</strong> after confirmed payment
+      and complete inputs.
+    </div>
+
+    <a href="/request-founding-review.html" class="cta-solid">
+      Request Founding Review — $400
+    </a>
   </div>
+</section>
+
+<div class="container">
+  <h2>What is Founding Review?</h2>
+  <p>
+    Founding Review is an independent analytical determination based solely on
+    the materials you submit. It answers one bounded question:
+  </p>
+  <p><strong>Is there a detectable scaling signal — yes or no?</strong></p>
+
+  <h2>What You Receive</h2>
+  <p>
+    — Founding Review PDF<br/>
+    — Assessment of 8 internal metrics (A–H)<br/>
+    — Binary scaling signal determination<br/>
+    — Explicit scope and limitation statements
+  </p>
+
+  <h2>Pricing</h2>
+  <p><strong>$400 — one-time Founding Review</strong></p>
+</div>
+
+<div class="footer">
+  © SignalReview. All rights reserved.<br/>
+  Methodology and structure are proprietary and protected as trade secrets.
+</div>
 
 </body>
 </html>
