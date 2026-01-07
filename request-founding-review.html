@@ -2,106 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Request Founding Review</title>
+  <title>Request Founding Review — SignalReview</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
     body {
-      font-family: Inter, Arial, sans-serif;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Inter, Helvetica, Arial, sans-serif;
       background: #ffffff;
       color: #111;
       line-height: 1.6;
-      margin: 0;
     }
 
     .container {
       max-width: 760px;
       margin: 0 auto;
-      padding: 56px 24px;
+      padding: 72px 48px;
     }
 
     h1 {
-      font-size: 32px;
-      margin-bottom: 8px;
+      font-size: 36px;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      color: #555;
+      margin-bottom: 40px;
+      max-width: 640px;
     }
 
     h2 {
       font-size: 20px;
       margin-top: 48px;
-    }
-
-    p {
-      font-size: 14px;
-      color: #444;
+      margin-bottom: 12px;
     }
 
     label {
       display: block;
-      margin-top: 20px;
-      font-weight: 600;
       font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 6px;
     }
 
-    input, textarea, select {
+    input, textarea {
       width: 100%;
-      margin-top: 6px;
-      padding: 10px;
+      padding: 12px 14px;
       font-size: 14px;
       border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 24px;
     }
 
     textarea {
-      min-height: 100px;
+      min-height: 120px;
+      resize: vertical;
     }
 
-    .checkbox-group {
-      margin-top: 24px;
-    }
-
-    .checkbox-item {
+    .url-field {
       display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-top: 14px;
-      font-size: 14px;
-    }
-
-    .checkbox-item input {
-      margin-top: 3px;
-    }
-
-    button {
-      margin-top: 40px;
-      padding: 14px 24px;
-      font-size: 15px;
-      font-weight: 600;
-      border: 2px solid #000;
-      background: #fff;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    button:hover {
-      background: #000;
-      color: #fff;
+      align-items: center;
+      margin-bottom: 24px;
     }
 
     .url-prefix {
-      display: flex;
-      align-items: center;
-    }
-
-    .url-prefix span {
-      padding: 10px 8px;
-      background: #f3f4f6;
+      padding: 12px 10px;
+      font-size: 14px;
+      background: #f0f0f0;
       border: 1px solid #ccc;
       border-right: none;
-      font-size: 14px;
+      border-radius: 4px 0 0 4px;
       color: #555;
     }
 
-    .url-prefix input {
+    .url-input {
+      border-radius: 0 4px 4px 0;
       border-left: none;
+    }
+
+    .checkbox-group {
+      margin-top: 32px;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .checkbox input {
+      margin-right: 12px;
+      margin-top: 4px;
+    }
+
+    .cta {
+      margin-top: 48px;
+      text-align: center;
+    }
+
+    .cta button {
+      padding: 16px 32px;
+      font-size: 16px;
+      font-weight: 600;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .cta button:hover {
+      opacity: 0.9;
+    }
+
+    .micro {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    .footer {
+      margin-top: 72px;
+      padding-top: 24px;
+      border-top: 1px solid #e6e6e6;
+      font-size: 13px;
+      color: #666;
     }
   </style>
 </head>
@@ -109,102 +138,64 @@
 
 <div class="container">
 
-<h1>Request Founding Review</h1>
-<p>
-This form collects the minimum required inputs for an independent
-Founding Review determination.
-</p>
-
-<form
-  action="https://founding-review-autoack.moneyparking.workers.dev"
-  method="POST"
->
-
-<h2>A. Identification</h2>
-
-<label>Contact email</label>
-<input type="email" name="email" required />
-
-<label>Project / Product URL</label>
-<div class="url-prefix">
-  <span>https://</span>
-  <input
-    type="text"
-    name="project_url"
-    placeholder="example.com"
-    required
-    oninput="this.value = this.value.replace(/^https?:\/\//i, '')"
-  />
-</div>
-
-<h2>B. Product Context</h2>
-
-<label>What currently exists? (prototype, live product, internal tool, etc.)</label>
-<textarea name="product_state" required></textarea>
-
-<label>What concrete problem is being addressed?</label>
-<textarea name="problem_statement" required></textarea>
-
-<h2>C. Market Interaction Signals</h2>
-
-<label>Who has already interacted with this product?</label>
-<textarea name="market_interactions" required></textarea>
-
-<label>What frictions or resistance have you observed?</label>
-<textarea name="market_friction"></textarea>
-
-<h2>D. Revenue / Willingness-to-Pay Signals</h2>
-
-<label>Have any payments, commitments, or pricing tests occurred?</label>
-<select name="revenue_signal">
-  <option value="no">No</option>
-  <option value="informal">Yes — informal</option>
-  <option value="paid">Yes — paid</option>
-</select>
-
-<label>If yes, describe the form of willingness-to-pay observed</label>
-<textarea name="wtp_description"></textarea>
-
-<h2>E. Execution Constraints</h2>
-
-<label>What currently limits execution or repeatability?</label>
-<textarea name="execution_constraints"></textarea>
-
-<h2>F. Acknowledgements</h2>
-
-<div class="checkbox-group">
-
-  <div class="checkbox-item">
-    <input type="checkbox" name="ack_scope" required />
-    <span>
-      I understand this is an independent analytical determination, not consulting or advice.
-    </span>
+  <h1>Request Founding Review</h1>
+  <div class="subtitle">
+    Submit your materials for an independent economic determination.
+    Fixed scope. One-time review. No advisory.
   </div>
 
-  <div class="checkbox-item">
-    <input type="checkbox" name="ack_output" required />
-    <span>
-      I understand the output is a binary scaling signal (YES / NO), not a recommendation.
-    </span>
+  <form action="/payment-instructions.html" method="GET">
+
+    <label>Email address</label>
+    <input type="email" name="email" required placeholder="you@company.com" />
+
+    <label>Project or company name</label>
+    <input type="text" name="project_name" required placeholder="Example: Acme Analytics" />
+
+    <label>Project website</label>
+    <div class="url-field">
+      <div class="url-prefix">https://</div>
+      <input type="text" name="website" class="url-input" placeholder="example.com" />
+    </div>
+
+    <label>Brief description (optional)</label>
+    <textarea name="description"
+      placeholder="Short factual description of the product or initiative. No pitch required.">
+    </textarea>
+
+    <div class="checkbox-group">
+      <div class="checkbox">
+        <input type="checkbox" required />
+        <span>I understand that Founding Review is an independent analytical determination and does not constitute advice.</span>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" required />
+        <span>I understand the scope is fixed and no optimization or recommendations will be provided.</span>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" required />
+        <span>I understand the price is USD $400 and the review is delivered within 72 hours after confirmed payment and complete inputs.</span>
+      </div>
+    </div>
+
+    <div class="cta">
+      <button type="submit">
+        Continue to Payment
+      </button>
+      <div class="micro">
+        One-time payment · No subscription · No recurring charges
+      </div>
+    </div>
+
+  </form>
+
+  <div class="footer">
+    Questions? Contact <strong>signal@signalreview.co</strong>
   </div>
-
-  <div class="checkbox-item">
-    <input type="checkbox" name="ack_accuracy" required />
-    <span>
-      I confirm the information provided is accurate to the best of my knowledge.
-    </span>
-  </div>
-
-</div>
-
-<button type="submit">
-  Proceed to Payment — $400
-</button>
-
-</form>
 
 </div>
 
 </body>
 </html>
-
