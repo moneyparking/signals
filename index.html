@@ -4,118 +4,238 @@
   <meta charset="UTF-8" />
   <title>Founding Review — Independent Economic Determination</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #111111;
+      --accent-bg: #f9fafb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #111;
       margin: 0;
-      background: #fff;
-      line-height: 1.55;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
+
     .container {
-      max-width: 920px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 56px 24px;
+      padding: 72px 24px;
     }
-    h1 { font-size: 34px; }
-    h2 { font-size: 22px; margin-top: 48px; }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.2;
+      margin: 0 0 16px;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-top: 64px;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      max-width: 760px;
+      font-size: 16px;
+    }
+
+    ul, ol {
+      max-width: 760px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .hero {
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 720px;
+    }
+
     .meta {
-      font-size: 13px;
-      color: #555;
-      margin: 16px 0 28px;
+      margin-top: 24px;
+      font-size: 14px;
+      color: var(--muted);
     }
+
     .cta {
       display: inline-block;
+      margin-top: 32px;
       padding: 14px 28px;
-      border: 2px solid #000;
+      font-size: 15px;
+      font-weight: 600;
+      border: 2px solid var(--accent);
+      color: var(--accent);
       text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      margin-top: 24px;
+      transition: all 0.15s ease;
     }
+
     .cta:hover {
-      background: #000;
-      color: #fff;
+      background: var(--accent);
+      color: #ffffff;
     }
-    .box {
-      border: 1px solid #000;
-      padding: 20px;
-      margin-top: 24px;
+
+    .section-box {
+      background: var(--accent-bg);
+      border: 1px solid var(--border);
+      padding: 32px;
+      margin-top: 32px;
     }
+
     .price {
-      font-size: 28px;
-      font-weight: bold;
+      font-size: 36px;
+      font-weight: 700;
+      margin: 8px 0;
     }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 64px 0;
+    }
+
     .footer {
-      margin-top: 72px;
-      font-size: 12px;
-      color: #555;
-      border-top: 1px solid #aaa;
-      padding-top: 20px;
+      margin-top: 96px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 34px;
+      }
+      h2 {
+        font-size: 22px;
+      }
     }
   </style>
 </head>
 <body>
 
-<div class="container">
+  <div class="container">
 
-<h1>Founding Review</h1>
-<p><strong>Independent Economic Determination for Early-Stage Products</strong></p>
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Founding Review</h1>
 
-<p>
-  A one-time, fixed-scope review that determines whether a scalable economic
-  signal is present — without advice, projections, or optimization.
-</p>
+      <p class="subtitle">
+        Independent Economic Determination for Early-Stage Products
+      </p>
 
-<div class="meta">
-  Fixed Scope · One-Time Review · No Advisory · No Optimization
-</div>
+      <p>
+        A one-time, fixed-scope review that determines whether a scalable
+        economic signal is present — without advice, projections, or
+        optimization.
+      </p>
 
-<a class="cta" href="/request-founding-review">
-  Request Founding Review — $400
-</a>
+      <div class="meta">
+        Fixed Scope · One-Time Review · No Advisory · No Optimization
+      </div>
 
-<h2>What is Founding Review?</h2>
-<p>
-  Founding Review is an independent analytical determination based solely on the
-  materials you submit. It answers one bounded question:
-</p>
-<p><strong>Is there a detectable scaling signal — yes or no?</strong></p>
+      <a href="/request-founding-review" class="cta">
+        Request Founding Review — $400
+      </a>
+    </section>
 
-<h2>What You Receive</h2>
-<ul>
-  <li>Founding Review PDF</li>
-  <li>Assessment of 8 internal metrics (A–H)</li>
-  <li>Binary scaling signal determination</li>
-  <li>Clear scope and limitation statements</li>
-</ul>
+    <!-- WHAT IS -->
+    <section>
+      <h2>What is Founding Review?</h2>
 
-<h2>How It Works</h2>
-<ol>
-  <li>You submit your materials</li>
-  <li>Inputs are checked for consistency</li>
-  <li>Signals are evaluated</li>
-  <li>You receive the Founding Review PDF</li>
-</ol>
+      <p>
+        Founding Review is an independent analytical determination based solely
+        on the materials you submit. It evaluates a closed set of internal
+        economic and execution signals.
+      </p>
 
-<h2>Pricing</h2>
-<p class="price">$400 — Founding Review</p>
+      <p><strong>
+        It answers one bounded question:
+        <br/>
+        Is there a detectable scaling signal — yes or no?
+      </strong></p>
+    </section>
 
-<a class="cta" href="/request-founding-review">
-  Request Founding Review — $400
-</a>
+    <!-- WHAT YOU RECEIVE -->
+    <section>
+      <h2>What You Receive</h2>
 
-<div class="footer">
-  <p>
-    The Founding Review constitutes an independent analytical determination.
-    It does not represent advice, endorsement, or recommendation.
-  </p>
-  <p>
-    Methodology and structure are proprietary and protected as trade secrets.
-  </p>
-  <p>© SignalReview. All rights reserved.</p>
-</div>
+      <ul>
+        <li>Founding Review PDF (single recipient)</li>
+        <li>Assessment of 8 internal metrics (A–H)</li>
+        <li>Binary scaling signal determination (YES / NO)</li>
+        <li>Clear scope and limitation statements</li>
+      </ul>
+    </section>
 
-</div>
+    <!-- HOW IT WORKS -->
+    <section>
+      <h2>How It Works</h2>
+
+      <ol>
+        <li>You submit your materials</li>
+        <li>Inputs are checked for internal consistency</li>
+        <li>Signals are evaluated as a closed system</li>
+        <li>You receive the Founding Review PDF</li>
+      </ol>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section-box">
+      <h2>Pricing</h2>
+
+      <div class="price">$400</div>
+
+      <p>
+        One-time, fixed-scope Founding Review.
+        <br/>
+        No subscriptions. No upsells.
+      </p>
+
+      <a href="/request-founding-review" class="cta">
+        Request Founding Review — $400
+      </a>
+    </section>
+
+    <!-- LEGAL -->
+    <div class="footer">
+      <p>
+        The Founding Review constitutes an independent analytical determination.
+        It does not represent advice, endorsement, prediction, or recommendation.
+      </p>
+
+      <p>
+        The structure, signal composition, and interpretation logic of the review
+        are proprietary and protected as confidential trade secrets. Redistribution
+        or reuse without authorization is prohibited.
+      </p>
+
+      <p>© SignalReview. All rights reserved.</p>
+    </div>
+
+  </div>
+
 </body>
 </html>
