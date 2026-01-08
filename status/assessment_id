@@ -1,0 +1,51 @@
+app.get("/status/:assessment_id", requireAdmin, async (req, res) => {
+  const { assessment_id } = req.params;
+
+  if (!R2_ENABLED) {
+    return res.status(500).json({ error: "r2_not_configured" });
+  }
+
+  const exists = async (key) => {
+    try {
+      await s3.send(
+        new HeadObjectCommand({
+          Bucket: R2_BUCKET,
+          Key: key,
+        })
+      );
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
+  const resultKey = `founding-results/${assessment_id}/result.json`;
+  const pdfKey = `founding-review/${assessment_id}.pdf`;
+  const lockKey = `locks/${assessment_id}.lock`;
+
+  const [hasResult, hasPdf, hasLock] = await Promise.all([
+    exists(resultKey),
+    exists(pdfKey),
+    exists(lockKey),
+  ]);
+
+  let status = "not_found";
+
+  if (hasLock && !hasPdf) {
+    status = hasResult ? "rendering" : "accepted";
+  } else if (hasResult && hasPdf && !hasLock) {
+    status = "completed";
+  } else if (hasResult && !hasPdf && !hasLock) {
+    status = "failed";
+  }
+
+  res.json({
+    assessment_id,
+    status,
+    artifacts: {
+      result: hasResult,
+      pdf: hasPdf,
+      lock: hasLock,
+    },
+  });
+});
