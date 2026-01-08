@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Founding Review Status</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 60px;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 { margin-bottom: 20px; }
+    .status { margin: 20px 0; }
+    .loading { color: #666; }
+    .ready { color: green; }
+    .error { color: red; }
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Founding Review</h1>
+<div id="content" class="status loading">Checking status…</div>
+
+<script>
+  const assessmentId = window.location.pathname.split("/").pop();
+  const statusUrl = `https://r2-storage-proxy.moneyparking.workers.dev/status/${assessmentId}`;
+  const pdfUrl = `https://r2-storage-proxy.moneyparking.workers.dev/founding-review/${assessmentId}.pdf`;
+
+  async function checkStatus() {
+    try {
+      const res = await fetch(statusUrl);
+      const data = await res.json();
+      const el = document.getElementById("content");
+
+      if (data.status === "processing") {
+        el.textContent = "Your report is being prepared…";
+        el.className = "status loading";
+        setTimeout(checkStatus, 5000);
+        return;
+      }
+
+      if (data.status === "ready") {
+        el.innerHTML = `
+          <div class="status ready">
+            Your report is ready.
+          </div>
+          <a class="button" href="${pdfUrl}" target="_blank">
+            Download PDF
+          </a>
+        `;
+        return;
+      }
+
+      if (data.status === "not_found") {
+        el.textContent = "Assessment not found.";
+        el.className = "status error";
+        return;
+      }
+
+      el.textContent = "Unexpected status.";
+      el.className = "status error";
+    } catch (e) {
+      document.getElementById("content").textContent =
+        "Failed to load status. Please refresh.";
+    }
+  }
+
+  checkStatus();
+</script>
+
+</body>
+</html>
