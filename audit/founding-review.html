@@ -11,15 +11,27 @@
 </head>
 <body>
   <h1>Founding Review</h1>
-  <div id="content"></div>
+  <div id="content">Loading…</div>
 
   <script>
-    const data = window.__FOUNDING_RESULT__;
+    function getData() {
+      const params = new URLSearchParams(window.location.search);
+      const raw = params.get("data");
+      if (!raw) return null;
+      try {
+        return JSON.parse(decodeURIComponent(escape(atob(raw))));
+      } catch (e) {
+        return { error: "Failed to decode data" };
+      }
+    }
+
+    const data = getData();
+    const el = document.getElementById("content");
+
     if (!data) {
-      document.getElementById("content").innerText = "No data provided";
+      el.innerText = "No data provided";
     } else {
-      document.getElementById("content").innerHTML =
-        "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+      el.innerHTML = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
     }
   </script>
 </body>
