@@ -4,89 +4,74 @@
   <meta charset="UTF-8" />
   <title>Founding Review</title>
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 40px;
-      color: #111;
-    }
-    h1 { font-size: 28px; }
-    h2 { font-size: 18px; margin-top: 30px; }
-    .metric { margin: 6px 0; }
+    body { font-family: Arial, Helvetica, sans-serif; color: #111; }
+    h1 { margin-bottom: 6px; }
+    .muted { color: #666; }
+    table { border-collapse: collapse; width: 100%; margin-top: 12px; }
+    th, td { border: 1px solid #ddd; padding: 8px; }
+    th { background: #f3f3f3; text-align: left; }
     .ok { color: #0a7; }
     .risk { color: #c33; }
-    footer {
-      margin-top: 60px;
-      font-size: 12px;
-      color: #666;
-      border-top: 1px solid #ddd;
-      padding-top: 12px;
-    }
-    code { font-size: 11px; }
+    .box { margin-top: 14px; padding: 10px; border: 1px solid #ddd; }
+    footer { margin-top: 24px; font-size: 12px; color: #777; }
   </style>
 </head>
 <body>
+  <h1>Founding Review</h1>
+  <div class="muted" id="meta"></div>
 
-<h1>Founding Review</h1>
+  <div class="box">
+    <strong>Determination</strong>
+    <p id="determination"></p>
+  </div>
 
-<p>
-  This document represents a one-time automated determination based on the
-  inputs provided at the time of submission.
-</p>
+  <table id="metrics">
+    <thead>
+      <tr><th>Metric</th><th>Status</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
 
-<h2>Metrics</h2>
-<div id="metrics"></div>
+  <div class="box">
+    <strong>Limitations</strong>
+    <ul id="limitations"></ul>
+  </div>
 
-<h2>Scaling Signal</h2>
-<p id="scaling"></p>
+  <footer>
+    Generated automatically. One-time determination. No advisory.
+  </footer>
 
-<h2>Determination</h2>
-<p id="determination"></p>
+  <script>
+    (function () {
+      const data = window.__FOUNDING_RESULT__;
+      if (!data) return;
 
-<footer>
-  <p>
-    Assessment ID:
-    <strong id="assessment_id"></strong><br/>
-    Decision hash:
-    <code id="decision_hash"></code><br/>
-    Methodology version: FR-1.0
-  </p>
-  <p>
-    Fixed scope · One-time determination · No advisory or optimization
-  </p>
-</footer>
+      document.getElementById("meta").textContent =
+        `${data.assessment_id} • ${data.generated_at}`;
 
-<script>
-  /* UNIVERSAL SAFE ACCESS */
-  const data = globalThis.__FOUNDING_RESULT__;
+      document.getElementById("determination").textContent =
+        data.determination?.statement || "";
 
-  if (!data) {
-    document.body.innerHTML =
-      "<p>Invalid rendering context</p>";
-    throw new Error("FOUNDING_RESULT missing");
-  }
+      const tbody = document.querySelector("#metrics tbody");
+      Object.entries(data.metrics || {}).forEach(([k, v]) => {
+        const tr = document.createElement("tr");
+        const tdK = document.createElement("td");
+        const tdV = document.createElement("td");
+        tdK.textContent = k;
+        tdV.textContent = v.status;
+        tdV.className = v.status === "ok" ? "ok" : "risk";
+        tr.appendChild(tdK);
+        tr.appendChild(tdV);
+        tbody.appendChild(tr);
+      });
 
-  const metricsEl = document.getElementById("metrics");
-  Object.entries(data.metrics || {}).forEach(([key, value]) => {
-    const div = document.createElement("div");
-    div.className = "metric " + value.status;
-    div.textContent = `${key}: ${value.status.toUpperCase()}`;
-    metricsEl.appendChild(div);
-  });
-
-  document.getElementById("scaling").textContent =
-    data.scaling_signal?.present
-      ? "Scaling signal is present."
-      : "Scaling signal is not present.";
-
-  document.getElementById("determination").textContent =
-    data.determination?.statement || "";
-
-  document.getElementById("assessment_id").textContent =
-    data.assessment_id;
-
-  document.getElementById("decision_hash").textContent =
-    data.decision_hash;
-</script>
-
+      const ul = document.getElementById("limitations");
+      (data.limitations || []).forEach(l => {
+        const li = document.createElement("li");
+        li.textContent = l;
+        ul.appendChild(li);
+      });
+    })();
+  </script>
 </body>
 </html>
