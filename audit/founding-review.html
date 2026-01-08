@@ -4,74 +4,23 @@
   <meta charset="UTF-8" />
   <title>Founding Review</title>
   <style>
-    body { font-family: Arial, Helvetica, sans-serif; color: #111; }
-    h1 { margin-bottom: 6px; }
-    .muted { color: #666; }
-    table { border-collapse: collapse; width: 100%; margin-top: 12px; }
-    th, td { border: 1px solid #ddd; padding: 8px; }
-    th { background: #f3f3f3; text-align: left; }
-    .ok { color: #0a7; }
-    .risk { color: #c33; }
-    .box { margin-top: 14px; padding: 10px; border: 1px solid #ddd; }
-    footer { margin-top: 24px; font-size: 12px; color: #777; }
+    body { font-family: Arial, sans-serif; padding: 40px; }
+    h1 { margin-bottom: 20px; }
+    pre { background: #f5f5f5; padding: 20px; }
   </style>
 </head>
 <body>
   <h1>Founding Review</h1>
-  <div class="muted" id="meta"></div>
-
-  <div class="box">
-    <strong>Determination</strong>
-    <p id="determination"></p>
-  </div>
-
-  <table id="metrics">
-    <thead>
-      <tr><th>Metric</th><th>Status</th></tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-
-  <div class="box">
-    <strong>Limitations</strong>
-    <ul id="limitations"></ul>
-  </div>
-
-  <footer>
-    Generated automatically. One-time determination. No advisory.
-  </footer>
+  <div id="content"></div>
 
   <script>
-    (function () {
-      const data = window.__FOUNDING_RESULT__;
-      if (!data) return;
-
-      document.getElementById("meta").textContent =
-        `${data.assessment_id} • ${data.generated_at}`;
-
-      document.getElementById("determination").textContent =
-        data.determination?.statement || "";
-
-      const tbody = document.querySelector("#metrics tbody");
-      Object.entries(data.metrics || {}).forEach(([k, v]) => {
-        const tr = document.createElement("tr");
-        const tdK = document.createElement("td");
-        const tdV = document.createElement("td");
-        tdK.textContent = k;
-        tdV.textContent = v.status;
-        tdV.className = v.status === "ok" ? "ok" : "risk";
-        tr.appendChild(tdK);
-        tr.appendChild(tdV);
-        tbody.appendChild(tr);
-      });
-
-      const ul = document.getElementById("limitations");
-      (data.limitations || []).forEach(l => {
-        const li = document.createElement("li");
-        li.textContent = l;
-        ul.appendChild(li);
-      });
-    })();
+    const data = window.__FOUNDING_RESULT__;
+    if (!data) {
+      document.getElementById("content").innerText = "No data provided";
+    } else {
+      document.getElementById("content").innerHTML =
+        "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+    }
   </script>
 </body>
 </html>
