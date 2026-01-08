@@ -9,17 +9,9 @@
       margin: 40px;
       color: #111;
     }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-size: 18px;
-      margin-top: 30px;
-    }
-    .metric {
-      margin: 6px 0;
-    }
+    h1 { font-size: 28px; }
+    h2 { font-size: 18px; margin-top: 30px; }
+    .metric { margin: 6px 0; }
     .ok { color: #0a7; }
     .risk { color: #c33; }
     footer {
@@ -29,9 +21,7 @@
       border-top: 1px solid #ddd;
       padding-top: 12px;
     }
-    code {
-      font-size: 11px;
-    }
+    code { font-size: 11px; }
   </style>
 </head>
 <body>
@@ -66,18 +56,15 @@
 </footer>
 
 <script>
-  /**
-   * Playwright injects founding_result here
-   * window.__FOUNDING_RESULT__ MUST exist
-   */
-  const data = window.__FOUNDING_RESULT__;
+  /* UNIVERSAL SAFE ACCESS */
+  const data = globalThis.__FOUNDING_RESULT__;
 
   if (!data) {
-    document.body.innerHTML = "<p>Invalid rendering context</p>";
+    document.body.innerHTML =
+      "<p>Invalid rendering context</p>";
     throw new Error("FOUNDING_RESULT missing");
   }
 
-  // metrics
   const metricsEl = document.getElementById("metrics");
   Object.entries(data.metrics || {}).forEach(([key, value]) => {
     const div = document.createElement("div");
@@ -86,17 +73,14 @@
     metricsEl.appendChild(div);
   });
 
-  // scaling
   document.getElementById("scaling").textContent =
     data.scaling_signal?.present
       ? "Scaling signal is present."
       : "Scaling signal is not present.";
 
-  // determination
   document.getElementById("determination").textContent =
     data.determination?.statement || "";
 
-  // footer
   document.getElementById("assessment_id").textContent =
     data.assessment_id;
 
