@@ -1,1 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+  color: #111;
+}
+
+.watermark {
+  position: fixed;
+  top: 40%;
+  left: 20%;
+  font-size: 64px;
+  color: rgba(0,0,0,0.08);
+  transform: rotate(-30deg);
+  pointer-events: none;
+}
 
